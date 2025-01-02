@@ -32,10 +32,15 @@ Terms
 Energy, consumption, 
 * Link budget, power consumption for network linkage and transmission, end to end, 
 
-Internetowking
+Internetowking, 
 * Gateway, multiprotocol, 
 * Router, 
-* Switch, 
+* Switch,
+
+Internetworking, 
+* CSMA-CA, collision awarnes, LoRa TR013,
+* LLC, logical link layer
+* MAC, medium access control, 
 
 Organisations
 * 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
