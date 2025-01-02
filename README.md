@@ -44,6 +44,10 @@ Internetworking,
 
 Organisations
 * 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
+* LoRa Alliance, 
+
+Standards, wireless networking, Wi Fi, 
+* IEEE 802.11ah, 2017, iso equivalent?
 * LoRa , Long Range LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer,
 
 Physics
