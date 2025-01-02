@@ -32,6 +32,17 @@ Terms
 Energy, consumption, 
 * Link budget, power consumption for network linkage and transmission, end to end, 
 
+Internetowking
+* Gateway, multiprotocol, 
+* Router, 
+* Switch, 
+
 Organisations
 * 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
-* LoRa , Long Range LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, 
+* LoRa , Long Range LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer,
+
+Physics
+* radio frequency, electromagnetic spectrum, 
+* light, cables, pulse packet, 
+* current, pulse packet,
+* 
