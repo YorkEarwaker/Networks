@@ -46,9 +46,12 @@ Organisations
 * 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
 * LoRa Alliance, 
 
-Standards, wireless networking, Wi Fi, 
-* IEEE 802.11ah, 2017, iso equivalent?
-* LoRa , Long Range LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer,
+Standards, wireless networking, Wi Fi, Wi Fi HaLow, 
+* DASH7, [WP](https://en.wikipedia.org/wiki/DASH7), open source, based on ISO/IEC 18000-7, 
+* IEEE 802.11ah, [WP](https://en.wikipedia.org/wiki/IEEE_802.11ah), 2017, iso equivalent?
+* LoRa, [WP](https://en.wikipedia.org/wiki/LoRa) Lo(ng) Ra(nge) LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer, proprietry,
+* <todo: others to list, >
+* List of wireless networking protocols, 
 
 Physics
 * radio frequency, electromagnetic spectrum, 
