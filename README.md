@@ -30,3 +30,4 @@ Terms
 
 Organisations
 * 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
+* LoRa , Long Range LoRa, battery powered, IoT, IIoT, 
