@@ -7,7 +7,7 @@ networks, protocols, osi iso seven layer model,
 TODO
 * <todo: choose a project, >
 * <todo: review ns-3, as candidate first project, >
-* <todo: focus on use to combat global waring and climate change, >
+* <todo: focus on use to combat global waring and climate change, extreme weather attribution (Imperial), linking models of different kinds, >
 * <todo: relation to ai, >
 * <todo: relation to robotics, iiot, remote sensing, telemetry, >
 * <todo: relation to neuromorphic computing, as interneuron interbrain substrait?, parallel multi gai processing, multi agent processing, >
