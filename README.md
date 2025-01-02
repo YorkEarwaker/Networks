@@ -11,6 +11,7 @@ TODO
 * <todo: relation to ai, >
 * <todo: relation to robotics, iiot, remote sensing, telemetry, >
 * <todo: relation to neuromorphic computing, as interneuron interbrain substrait?, parallel multi gai processing, multi agent processing, >
+* <todo: relation to music, sonics, consider a music repository, pitch encoding and transmission, ! >
 
 DONE
 * <done: this page as intent, >
