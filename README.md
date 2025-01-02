@@ -8,6 +8,8 @@ TODO
 * <todo: choose a project, >
 * <todo: review ns-3, as candidate first project, >
 * <todo: focus on use to combat global waring and climate change, >
+* <todo: relation to ai, >
+* <todo: relation to robotics, >
 
 DONE
 * <done: this page as intent, >
