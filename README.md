@@ -18,7 +18,7 @@ DONE
 ## Libraries
 
 Network Simulator
-* NS-3, [GH](https://gitlab.com/nsnam/ns-3-dev), [WS](https://www.nsnam.org/), [WP](https://en.wikipedia.org/wiki/Ns_(simulator)), C++(core), Python (api/bindings), CMake, <depricated: TCL?, Octl?>, discrete event network simulation for internet systems, event driven architecture, rest?, 
+* NS-3, gitlab [GH](https://gitlab.com/nsnam/ns-3-dev), org [WS](https://www.nsnam.org/), wiki [WS](https://www.nsnam.org/wiki/Main_Page), [WP](https://en.wikipedia.org/wiki/Ns_(simulator)), C++(core), Python (api/bindings), CMake, <depricated: TCL?, Octl?>, discrete event network simulation for internet systems, event driven architecture, rest?, 
 
 ## References
 
