@@ -19,5 +19,7 @@ Network Simulator
 
 ## References
 
-Biological networks, 
-Computer network, 
+* Biological networks, 
+* Computer network,
+
+* Systems sciecne, 
