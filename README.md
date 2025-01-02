@@ -21,5 +21,5 @@ Network Simulator
 
 * Biological networks, 
 * Computer network,
-
-* Systems sciecne, 
+* Systems sciecne,
+* 3GPP [WP](https://en.wikipedia.org/wiki/3GPP), 3G, 4G, 5G, mobile networks
