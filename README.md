@@ -10,6 +10,7 @@ TODO
 * <todo: focus on use to combat global waring and climate change, >
 * <todo: relation to ai, >
 * <todo: relation to robotics, >
+* <todo: relation to neuromorphic computing, as interneuron interbrain substrait?, parallel multi gai processing, >
 
 DONE
 * <done: this page as intent, >
