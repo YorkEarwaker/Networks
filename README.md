@@ -11,10 +11,11 @@ TODO
 * <todo: relation to ai, >
 * <todo: relation to robotics, iiot, remote sensing, telemetry, >
 * <todo: relation to neuromorphic computing, as interneuron interbrain substrait?, parallel multi gai processing, multi agent processing, >
-* <todo: relation to music, sonics, consider a music repository, pitch encoding and transmission, ! >
+* <todo: relation to music, sonics, consider a music repository, pitch encoding and transmission, ! > 
+* <todo: consider, project re DNS DHCP on local host Ubuntu 24.04 or Ubuntu 26.04, using; pi-hole, dnsmasq, others tbd, objective to block predatory internet domains, >
 
 DONE
-* <done: this page as intent, >
+* <done: intent to commit>
 
 ## Libraries
 
