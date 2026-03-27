@@ -29,7 +29,7 @@ DNS, DHCP
 * ...
 
 File transfer
-* curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/) online, 
+* curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/), docs - tutorial [WS](https://curl.se/docs/tutorial.html)
 
 ## References
 
