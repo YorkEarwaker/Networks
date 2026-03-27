@@ -22,6 +22,14 @@ DONE
 Network Simulator
 * NS-3, gitlab [GH](https://gitlab.com/nsnam/ns-3-dev), org [WS](https://www.nsnam.org/), wiki [WS](https://www.nsnam.org/wiki/Main_Page), apps [WS](https://apps.nsnam.org/), [WP](https://en.wikipedia.org/wiki/Ns_(simulator)), C++(core), Python (api/bindings), CMake, <depricated: TCL?, Octl?>, discrete event network simulation for internet systems, event driven architecture, rest?, linux? 
 
+DNS, DHCP
+* dnsmasq [WP](https://en.wikipedia.org/wiki/Dnsmasq), DNS caching, DHCP server
+* Pi-hole, [WP](https://en.wikipedia.org/wiki/Pi-hole), Ad blocker, DNS sink, DHCP server, 
+* ...
+
+File transfer
+* curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/) online, 
+
 ## References
 
 Terms
