@@ -24,7 +24,7 @@ Network Simulator
 * NS-3, gitlab [GH](https://gitlab.com/nsnam/ns-3-dev), org [WS](https://www.nsnam.org/), wiki [WS](https://www.nsnam.org/wiki/Main_Page), apps [WS](https://apps.nsnam.org/), [WP](https://en.wikipedia.org/wiki/Ns_(simulator)), C++(core), Python (api/bindings), CMake, <depricated: TCL?, Octl?>, discrete event network simulation for internet systems, event driven architecture, rest?, linux? 
 
 DNS, DHCP
-* dnsmasq [WP](https://en.wikipedia.org/wiki/Dnsmasq), DNS caching, DHCP server
+* dnsmasq [WP](https://en.wikipedia.org/wiki/Dnsmasq), ubuntu [WS](https://help.ubuntu.com/community/Dnsmasq), DNS caching, DHCP server
 * Pi-hole, [WP](https://en.wikipedia.org/wiki/Pi-hole), Ad blocker, DNS sink, DHCP server, 
 * ...
 
@@ -37,7 +37,7 @@ Terms
 * Biological networks, 
 * Computer network,
 * Internet, 
-* Systems sciecne,
+* Systems science,
 
 Energy, consumption, 
 * Link budget, power consumption for network linkage and transmission, end to end, 
@@ -59,7 +59,7 @@ Organisations
 Standards, wireless networking, Wi Fi, 
 * DASH7, [WP](https://en.wikipedia.org/wiki/DASH7), open source, based on ISO/IEC 18000-7, tag to tag coms, 
 * IEEE 802.11ah, [WP](https://en.wikipedia.org/wiki/IEEE_802.11ah), 2017, iso equivalent? Wi Fi HaLow, 
-* LoRa, [WP](https://en.wikipedia.org/wiki/LoRa) Lo(ng) Ra(nge) LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer, proprietry,
+* LoRa, [WP](https://en.wikipedia.org/wiki/LoRa) Lo(ng) Ra(nge) LoRa, battery powered, IoT, IIoT, low power wide area LPWA networking, physical layer, proprietary,
 * RFID, 
 * <todo: others to list, >
 * List of wireless networking protocols, 
