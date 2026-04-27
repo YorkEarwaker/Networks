@@ -23,6 +23,7 @@ DONE
 ## Output
 
 Determine ssh client version on localhost on the cli.
+* Note version 9.6, this version has been fixed for the 'terrapin attack' 
 ```
 $ ssh -V
 OpenSSH_9.6p1 Ubuntu-3ubuntu13.15, OpenSSL 3.0.13 30 Jan 2024
@@ -53,16 +54,15 @@ ii  openssh-client                                1:9.6p1-3ubuntu13.15          
 $ dpkg -l |grep openssh-server
 ```
 
-
-
-
-
 ## References
 
 Terms
 * SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), 
 * File transfer
 * System administration
+
+Concerns - vulnerabilities
+* Terrapin Attack, [WP](https://en.wikipedia.org/wiki/Terrapin_attack), fixed in ssh version 9.6
 
 News Papers - ssh version
 * Commands to know the version of OpenSSH client and server?, [WS](https://unix.stackexchange.com/questions/721368/commands-to-know-the-version-of-openssh-client-and-server), 18 Oct 2022 (edited), Unix & Linux, StackExchange, 
