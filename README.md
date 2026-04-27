@@ -17,6 +17,7 @@ TODO
 
 DONE
 * <done: intent to commit>
+* <done: consider, ssh project, specifically in relation to AGW project and ssh to Raspberry Pi SBC's and other embedded system, headless access, priority for devsecops for AGW projects, wip>
 
 ## Libraries
 
@@ -30,6 +31,7 @@ DNS, DHCP
 
 File transfer
 * curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/), docs - tutorial [WS](https://curl.se/docs/tutorial.html)
+* SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 
 ## References
 
