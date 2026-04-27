@@ -20,6 +20,43 @@ TODO
 DONE
 * <done: consider, intent to commit >
 
+## Output
+
+Determine ssh client version on localhost on the cli.
+```
+$ ssh -V
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.15, OpenSSL 3.0.13 30 Jan 2024
+```
+
+Determine ssh server version on localhost on the cli.
+* Note in this case no server version was detected on the localhost
+```
+$ sshd -V
+Command 'sshd' not found, but can be installed with:
+sudo apt install openssh-server
+```
+
+Determine ssh server version as well as client version on localhost on the cli.
+* Note in this case no server version was detected on the localhost
+```
+$ dpkg-query --showformat='${Version}\n' --show openssh-server openssh-client
+1:9.6p1-3ubuntu13.15
+
+$ dpkg -l | grep ssh
+ii  libssh-4:amd64                                0.10.6-2ubuntu0.4                                amd64        tiny C SSH library (OpenSSL flavor)
+ii  libssh-gcrypt-4:amd64                         0.10.6-2ubuntu0.4                                amd64        tiny C SSH library (gcrypt flavor)
+ii  openssh-client                                1:9.6p1-3ubuntu13.15                             amd64        secure shell (SSH) client, for secure access to remote machines
+
+$ dpkg -l |grep openssh-client
+ii  openssh-client                                1:9.6p1-3ubuntu13.15                             amd64        secure shell (SSH) client, for secure access to remote machines
+
+$ dpkg -l |grep openssh-server
+```
+
+
+
+
+
 ## References
 
 Terms
