@@ -4,7 +4,13 @@ Application layer protocol, software package that enables secure system administ
 
 ## Notes
 
-AGW project necessity. Secure headless communications for sys admin and file transfer to embedded systems.
+AGW project requirements. 
+* Secure headless communications remote access to embedded systems.
+* Remote log in.
+* Remote command line execution.
+* Remote file transfer.
+* Remote systems administration.
+* ...
 
 ## Status
 TODO
