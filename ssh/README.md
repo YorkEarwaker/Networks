@@ -12,15 +12,62 @@ AGW project requirements.
 * Remote systems administration.
 * ...
 
+Use Cases - IoT/IIoT
+* Use case; 01, development, systems engineering in the lab/field, making
+* Use case; 02; manufacture, systems assembly line in the factory/plant, 
+* Use case; 03, operations,  systems working deployed in the environment, functioning BAU 
+* Use case; 04, servicing,   systems maintenance/repairs in the shop/field, 
+* Use case; 0N, tbd ...
+
 ## Status
 TODO
 * <todo: consider, start tutorial first iteration cycle learning for robust good practice usage, >
-* <todo: consider, start use case for RPi Zero headless to Ubuntu Core and Raspberry Pi Trixie from Ubuntu 24.04.03 LTS Gnome, in first instance for BMV080 sensor project, >
+* <todo: consider, start use case for RPi Zero headless with either Ubuntu Core or Raspberry Pi Trixie from Ubuntu 24.04.03 LTS Gnome, in first instance for BMV080 sensor project, >
+* <todo: consider, ssh appropriate for all use cases listed in notes above, might be secondary not primary in some cases, i.e. REST in some/most operations and servicing? ponder more, >
+* <todo: consider, not ssh, REST so place elsewhere 'applications repo?', REST example see GitHub personal access tokens, for IIoT example see home electricity smart meters, REST use cases for the AGW project, >
 
 DONE
 * <done: consider, intent to commit >
+* <done: consider generic use case diagrams? generic context diagram? generic interaction diagram? wip>
 
 ## Output
+* Using ssh for access to embedded systems like Raspberry Pi single board computers SBC's.
+
+Context diagram
+* Network may be wired (e.g. CATV ethernet) or wireless (e.g. 3G/4G/5G WiFi) or both
+* Network may be local area LAN or wide area WAN or both
+* Network may be internal or external or both
+* Client software, installed on an operating system on a hardware device (i.e. ssh)
+* Server software, installed on an operating system on a hardware device (i.e sshd)
+* Device operating system may have installed on it both client software and server software
+```
+      Client --------------------- Network ------------------- Server
+```
+
+Interaction diagram
+* interactions happen over an operating network.
+* fine grained network systems operations activity is elided.
+```
+     ---------                                                ---------
+    | Client  |                    Network                   | Server  |
+     ---------                                                ---------
+         |                                                        |
+         | -- 1. client initiates connection contacting server -> |
+         |                                                        |
+         | <- 2. sends server public key ------------------------ |
+         |                                                        |
+         | <- 3. negotiate perameters and open secure channel --- |
+         |                                                        |
+         | -- 4. user login to server host operating system ----> |
+         |                                                        |
+         | -- 5. user does use case activities on/via server ---> |
+         :                                                        :
+         | -- 6. close ssh session -----------------------------> |
+```
+
+### Output - Check ssh version
+* for both the client software and the server software installed on localhost.
+* for security to ensure version has been patched for vulnerabilities.
 
 Determine ssh client version on localhost on the cli.
 * Note version 9.6, this version has been fixed for the 'terrapin attack' 
