@@ -13,11 +13,11 @@ AGW project requirements.
 * ...
 
 Use Cases - IoT/IIoT
-* Use case; 01, development, systems engineering in the lab/field, making
-* Use case; 02; manufacture, systems assembly line in the factory/plant, 
-* Use case; 03, operations,  systems working deployed in the environment, functioning BAU 
-* Use case; 04, servicing,   systems maintenance/repairs in the shop/field, 
-* Use case; 0N, tbd ...
+* Use case; 01, development, systems engineering in the lab/field,        making,      Test
+* Use case; 02; manufacture, systems assembly line in the factory/plant,  producing,   Quality Assurance
+* Use case; 03, operations,  systems working deployed in the environment, functioning, Business As Usual 
+* Use case; 04, servicing,   systems maintenance in the shop/field,       repairing,   IT Service/Asset Management
+* Use case; NN, tbd ...
 
 ## Status
 TODO
