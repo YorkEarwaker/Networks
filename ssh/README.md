@@ -31,8 +31,8 @@ TODO
 * <todo: consider, ssh appropriate for all use cases listed in notes above, might be secondary not primary in some cases, i.e. REST in some/most operations and servicing? ponder more, >
 * <todo: consider, not ssh, REST so place elsewhere 'applications repo?', REST example see GitHub personal access tokens, for IIoT example see home electricity smart meters, REST use cases for the AGW project, >
 * <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verify possibility yes or no, >
-* <todo: consider, login to RPi Z Ubuntu Core 24 from Dell Ubuntu 24 LTS, >
-* <todo: consider, install sshd server on RPi Trixie, login from Dell Ubuntu 24 LTS, >
+* <todo: consider, ssh login to RPi Z Ubuntu Core 24 from Dell Ubuntu 24 LTS, >
+* <todo: consider, install sshd server on RPi Trixie, login from ssh client on Dell Ubuntu 24 LTS, >
 
 DONE
 * <done: consider, intent to commit >
