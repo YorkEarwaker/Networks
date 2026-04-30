@@ -3,7 +3,7 @@
 Application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 
 See also
-* 
+* Electrical engineering, various embedded SBC projects [GH](https://github.com/YorkEarwaker/Electrical-Engineering), e.g. /rpi-z, ...
 
 ## Notes
 
@@ -30,7 +30,7 @@ TODO
 * <todo: consider, start use case for RPi Zero headless with either Ubuntu Core or Raspberry Pi Trixie from Ubuntu 24.04.03 LTS Gnome, in first instance for BMV080 sensor project, >
 * <todo: consider, ssh appropriate for all use cases listed in notes above, might be secondary not primary in some cases, i.e. REST in some/most operations and servicing? ponder more, >
 * <todo: consider, not ssh, REST so place elsewhere 'applications repo?', REST example see GitHub personal access tokens, for IIoT example see home electricity smart meters, REST use cases for the AGW project, >
-* <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verity possibility yes or no, >
+* <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verify possibility yes or no, >
 
 DONE
 * <done: consider, intent to commit >
@@ -40,7 +40,7 @@ DONE
 ## Output
 * Using ssh for access to embedded systems like Raspberry Pi single board computers SBC's.
 * Ubuntu Core 24, sshd server available out of the box, uses a SSH snap built in, managed service by core system. sshd server not installed separately. See 'Ubuntu Core 24' below.
-* Raspberry Pi Trixie, confirm sshd server installed seperately? See 'Raspberry Pi Trixie' below.
+* Raspberry Pi Trixie, confirm sshd server installed separately? See 'Raspberry Pi Trixie' below.
 
 Context diagram
 * Network may be wired (e.g. CATV ethernet) or wireless (e.g. 3G/4G/5G WiFi) or both
@@ -110,7 +110,7 @@ ii  openssh-client                                1:9.6p1-3ubuntu13.15          
 $ dpkg -l |grep openssh-server
 ```
 
-### Ubuntu Core 24 - embedded SBC deployment target
+### Ubuntu Core 24 - embedded SBC OS deployment target
 * Success! Completed during install.
 * SSH key setup prior to installation of the OS. SSH key is required during installation process.
 * Core uses a SSH snap built in, managed service by core system. snap-based SSH service.
@@ -121,7 +121,7 @@ $ dpkg -l |grep openssh-server
 see
 * Ubuntu One SSH
 
-### Raspberry Pi Trixie - embedded SBC deployment target
+### Raspberry Pi Trixie - embedded SBC OS deployment target
 * TBD
 * <todo: consider, tasks to accomplish ssh access to RPi Trixie SBC from Dell Ubuntu dev box, >
 * <todo: consider, confirm standard openssh-server use, standard /etc/ssh/sshd_config file, >
@@ -145,5 +145,12 @@ Terms
 Concerns - vulnerabilities
 * Terrapin Attack, [WP](https://en.wikipedia.org/wiki/Terrapin_attack), fixed in ssh version 9.6
 
+Docs - RPi
+* Remote Access, [WS](https://www.raspberrypi.com/documentation/computers/remote-access.html), RPi docs, 
+
 News Papers - ssh version
 * Commands to know the version of OpenSSH client and server?, [WS](https://unix.stackexchange.com/questions/721368/commands-to-know-the-version-of-openssh-client-and-server), 18 Oct 2022 (edited), Unix & Linux, StackExchange, 
+
+News Papers - ssh RPi, ssh Trixie
+* configure SSH trixie, [WS](https://forums.raspberrypi.com/viewtopic.php?t=396708), 7 March 2026, RPi Forums, 
+* Can't change RPi4 hostname, disable cloud init [WS](https://forums.raspberrypi.com/viewtopic.php?p=2355903&hilit=disable+cloud+init#p2355903), 30 Dec 2025, RPi Forums, 
