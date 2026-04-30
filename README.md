@@ -5,7 +5,6 @@ networks, protocols, osi iso seven layer model,
 ## Status
 
 TODO
-* <todo: choose a project, >
 * <todo: review ns-3, as candidate first project, >
 * <todo: focus on use to combat global waring and climate change, extreme weather attribution (Imperial), linking models of different kinds, >
 * <todo: relation to ai, >
@@ -14,9 +13,11 @@ TODO
 * <todo: relation to music, sonics, consider a music repository, pitch encoding and transmission, ! > 
 * <todo: consider, project re DNS DHCP on local host Ubuntu 24.04 or Ubuntu 26.04, using; pi-hole, dnsmasq, others tbd, objective to block predatory internet domains, >
 * <todo: consider, curl file transfer, to remote address, >
+* <todo: consider, curl project, how can it be used in relation to AGW project in general, specifivally curl to Raspberry Pi SBC's and other embedded system, >
 
 DONE
 * <done: intent to commit>
+* <done: choose a project, ssh>
 * <done: consider, ssh project, specifically in relation to AGW project and ssh to Raspberry Pi SBC's and other embedded system, headless access, priority for devsecops for AGW projects, wip>
 
 ## Libraries
