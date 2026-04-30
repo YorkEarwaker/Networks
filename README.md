@@ -14,6 +14,7 @@ TODO
 * <todo: consider, project re DNS DHCP on local host Ubuntu 24.04 or Ubuntu 26.04, using; pi-hole, dnsmasq, others tbd, objective to block predatory internet domains, >
 * <todo: consider, curl file transfer, to remote address, >
 * <todo: consider, curl project, how can it be used in relation to AGW project in general, specifivally curl to Raspberry Pi SBC's and other embedded system, >
+* <todo: consider, vnc for remote access, RPi Trixie in first instance on RPi Zero, is vnc access possible with Ubunut Core tbd? in which use cases would vnc beneficial for AGW project? in which use cases would vnc be prefereable to ssh? >
 
 DONE
 * <done: intent to commit>
@@ -30,9 +31,10 @@ DNS, DHCP
 * Pi-hole, [WP](https://en.wikipedia.org/wiki/Pi-hole), Ad blocker, DNS sink, DHCP server, 
 * ...
 
-File transfer
+Remote access, file transfer
 * curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/), docs - tutorial [WS](https://curl.se/docs/tutorial.html)
 * SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
+* VNC, virtual network computing 
 
 ## References
 
