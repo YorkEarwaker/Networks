@@ -133,6 +133,7 @@ see
 * <todo: consider, two dev use cases above with Ubuntu Core and RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
 * <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
 * <todo: consider, other use cases for ssh with wider server side IT platfrom estate for AGW project, very many, >
+* <todo: consider, unintall openssh-client from Dell Ubuntu LTS, how might it comflict with Ubuntu snap-based SSH service, >
 
 ## References
 
