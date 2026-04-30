@@ -2,6 +2,9 @@
 
 Application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 
+See also
+* 
+
 ## Notes
 
 AGW project requirements. 
@@ -27,14 +30,17 @@ TODO
 * <todo: consider, start use case for RPi Zero headless with either Ubuntu Core or Raspberry Pi Trixie from Ubuntu 24.04.03 LTS Gnome, in first instance for BMV080 sensor project, >
 * <todo: consider, ssh appropriate for all use cases listed in notes above, might be secondary not primary in some cases, i.e. REST in some/most operations and servicing? ponder more, >
 * <todo: consider, not ssh, REST so place elsewhere 'applications repo?', REST example see GitHub personal access tokens, for IIoT example see home electricity smart meters, REST use cases for the AGW project, >
-* <todo: consider, for Rpi Zero 2 W, check if ssh server (sshd) is installed on RPi Trixi and Ubuntu Core 24, install if not, setup to enable login via Dell Ubuntu ssh client (ssh), >
+* <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verity possibility yes or no, >
 
 DONE
 * <done: consider, intent to commit >
 * <done: consider generic use case diagrams? generic context diagram? generic interaction diagram? wip>
+* <done: consider, for Rpi Zero 2 W, check if ssh server (sshd) is installed on RPi Trixi and Ubuntu Core 24, install if not, setup to enable login via Dell Ubuntu ssh client (ssh), different mechanisms to install and manage ssh in both OS's, so different workflows required, >
 
 ## Output
 * Using ssh for access to embedded systems like Raspberry Pi single board computers SBC's.
+* Ubuntu Core 24, sshd server available out of the box, uses a SSH snap built in, managed service by core system. sshd server not installed separately. See 'Ubuntu Core 24' below.
+* Raspberry Pi Trixie, confirm sshd server installed seperately? See 'Raspberry Pi Trixie' below.
 
 Context diagram
 * Network may be wired (e.g. CATV ethernet) or wireless (e.g. 3G/4G/5G WiFi) or both
@@ -103,6 +109,30 @@ ii  openssh-client                                1:9.6p1-3ubuntu13.15          
 
 $ dpkg -l |grep openssh-server
 ```
+
+### Ubuntu Core 24 - embedded SBC deployment target
+* Success! Completed during install.
+* SSH key setup prior to installation of the OS. SSH key is required during installation process.
+* Core uses a SSH snap built in, managed service by core system. snap-based SSH service.
+* <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
+* <todo: consider, review 'snap set' commands to manage ssh snap configuration, find Ubuntu docs for same, >
+* <todo: consider, bau dev workflow for ssh with Ubuntu Core, use AGW project rpi-z/cpa/snr-rsl as examplar, >
+
+see
+* Ubuntu One SSH
+
+### Raspberry Pi Trixie - embedded SBC deployment target
+* TBD
+* <todo: consider, tasks to accomplish ssh access to RPi Trixie SBC from Dell Ubuntu dev box, >
+* <todo: consider, confirm standard openssh-server use, standard /etc/ssh/sshd_config file, >
+* <todo: consider, RPi docs for ssh into Trixie OS, >
+* <todo: consider, bau dev workflow for ssh with RPi Trixie, use AGW project rpi-z/cpa/snr-rsl as examplar, >
+
+### Dell Ubuntu LTS - laptop dev box
+* TBD
+* <todo: consider, two dev use cases above with Ubuntu Core and RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
+* <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
+* <todo: consider, other use cases for ssh with wider server side IT platfrom estate for AGW project, very many, >
 
 ## References
 
