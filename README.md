@@ -15,6 +15,7 @@ TODO
 * <todo: consider, curl file transfer, to remote address, >
 * <todo: consider, curl project, how can it be used in relation to AGW project in general, specifivally curl to Raspberry Pi SBC's and other embedded system, >
 * <todo: consider, vnc for remote access, RPi Trixie in first instance on RPi Zero, is vnc access possible with Ubunut Core tbd? in which use cases would vnc beneficial for AGW project? in which use cases would vnc be prefereable to ssh? >
+* <todo: consider, AGW organisation 'enterprise' network use cases, many, see ssh project for some identified, to identify others, >
 
 DONE
 * <done: intent to commit>
@@ -43,6 +44,9 @@ Terms
 * Computer network,
 * Internet, 
 * Systems science,
+
+Docs
+* RFC 1918, Address Allocation for Private Internets, [WS](https://datatracker.ietf.org/doc/html/rfc1918), IETF, 
 
 Energy, consumption, 
 * Link budget, power consumption for network linkage and transmission, end to end, 
