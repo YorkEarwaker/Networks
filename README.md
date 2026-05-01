@@ -37,6 +37,40 @@ Remote access, file transfer
 * SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 * VNC, virtual network computing 
 
+## Output
+
+
+### Localhost IP address - Linux
+
+Get localhost ip address. All the ip addresses assigned to the machine network interface. Including primary ip address. Excluding loopback address.
+```
+$ hostname -I
+```
+
+Get localhost ip address. Just the first ip address assigned to the machine network interface
+```
+$ hostname -I | awk '{print $1}'
+```
+
+Get detailed ip address information
+```
+$ ip addr show
+$ ip address show
+```
+
+Get ip address associated with the hostname. 
+```
+$ hostname -i
+127.0.1.1
+```
+
+Get IP4 addresses assigned to the machine network interface.
+```
+$ ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+```
+
+
+
 ## References
 
 Terms

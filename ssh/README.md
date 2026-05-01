@@ -15,7 +15,7 @@ AGW project requirements.
 * Remote systems administration.
 * ...
 
-Use Cases - IoT/IIoT
+Use Cases - ssh high level use cases for IoT/IIoT
 ```
 * Use case; 01, development, systems engineering in the lab/field,        making,      Test
 * Use case; 02; manufacture, systems assembly line in the factory/plant,  producing,   Quality Assurance
@@ -38,6 +38,7 @@ DONE
 * <done: consider, intent to commit >
 * <done: consider generic use case diagrams? generic context diagram? generic interaction diagram? wip>
 * <done: consider, for Rpi Zero 2 W, check if ssh server (sshd) is installed on RPi Trixi and Ubuntu Core 24, install if not, setup to enable login via Dell Ubuntu ssh client (ssh), different mechanisms to install and manage ssh in both OS's, so different workflows required, >
+* <done: consider, dev use cases above with RPi Zero running Ubuntu Core, for initial dev ssh workflow for AGW project, sensor device making, ssh logon from Dell Ubuntu LTS dev host to RPi Zero Ubuntu Core 4 deployment target, ssh logon success, other dev tasks for this workflow wip, >
 
 ## Output
 * Using ssh for access to embedded systems like Raspberry Pi single board computers SBC's.
@@ -130,12 +131,151 @@ see
 * <todo: consider, RPi docs for ssh into Trixie OS, >
 * <todo: consider, bau dev workflow for ssh with RPi Trixie, use AGW project rpi-z/cpa/snr-rsl as examplar, >
 
-### Dell Ubuntu LTS - laptop dev box
+### Dell Ubuntu LTS - laptop dev host
 * TBD
-* <todo: consider, two dev use cases above with Ubuntu Core and RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
+* <todo: consider, dev use cases above with RPi Zero running RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
 * <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
 * <todo: consider, other use cases for ssh with wider server side IT platfrom estate for AGW project, very many, >
 * <todo: consider, unintall openssh-client from Dell Ubuntu LTS, how might it comflict with Ubuntu snap-based SSH service, >
+
+#### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero Ubuntu Core 24
+From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspberry Pi Zero running Ubuntu Core 24 'the deployment target' OS.
+* Success!
+* SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS Gnome operating system
+* SSH server on RPi Zero 2 W hardware running Ubuntu Core 24 operating system
+* Query some of the RPi Zero specifications information
+```
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh yorkearwaker@<your-rpi-sbc-ip-address>
+Welcome to Ubuntu Core 24
+
+* Documentation: https://ubuntu.com/core/docs
+
+This is a pre-built Ubuntu Core image. Pre-built images are ideal for
+exploration as you develop your own custom Ubuntu Core image.
+
+To learn how to create your custom Ubuntu Core image, see our guide:
+
+* Getting Started: https://ubuntu.com/core/docs/get-started
+
+In this image, why not create an IoT web-kiosk. First, connect a
+screen, then run:
+
+   snap install ubuntu-frame wpe-webkit-mir-kiosk
+   snap set wpe-webkit-mir-kiosk url=https://ubuntu.com/core
+
+For more ideas, visit:
+
+* First steps: https://ubuntu.com/core/docs/first-steps
+Last login: Tue Jan 20 14:50:08 2026 from <your-dev-host-pc-ip-address>
+yorkearwaker@localhost:~$ 
+```
+
+Simple Model Identification
+```
+yorkearwaker@localhost:~$ cat /sys/firmware/devicetree/base/model
+Raspberry Pi Zero 2 W Rev 1.0
+```
+
+Subset of /proc/cpuinfo info using grep
+* Note, the Hardware line value not shown, it has been removed by kernel developers as it is not standard across arm architectures
+* for full info 'cat /proc/cpuinfo'
+```
+yorkearwaker@localhost:~$ cat /proc/cpuinfo | grep -E "Hardware|Revision|Model"
+Revision  	: 902120
+Model		: Raspberry Pi Zero 2 W Rev 1.0
+```
+
+Operating system version
+```
+yorkearwaker@localhost:~$ cat /etc/os-release
+NAME="Ubuntu Core"
+VERSION="24"
+ID=ubuntu-core
+PRETTY_NAME="Ubuntu Core 24"
+VERSION_ID="24"
+HOME_URL="https://snapcraft.io/"
+BUG_REPORT_URL="https://bugs.launchpad.net/snappy/"
+```
+
+Kernel version running
+```
+yorkearwaker@localhost:~$ uname -a
+Linux localhost 6.8.0-1043-raspi #47-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct 17 22:33:56 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+```
+
+RAM size
+```
+yorkearwaker@localhost:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           409Mi       149Mi        20Mi       4.3Mi       258Mi       259Mi
+Swap:             0B          0B          0B
+```
+
+CPU
+```
+yorkearwaker@localhost:~$ lscpu
+Architecture:             aarch64
+  CPU op-mode(s):         32-bit, 64-bit
+  Byte Order:             Little Endian
+CPU(s):                   4
+  On-line CPU(s) list:    0-3
+Vendor ID:                ARM
+  Model name:             Cortex-A53
+    Model:                4
+    Thread(s) per core:   1
+    Core(s) per cluster:  4
+    Socket(s):            -
+    Cluster(s):           1
+    Stepping:             r0p4
+    CPU(s) scaling MHz:   100%
+    CPU max MHz:          1000.0000
+    CPU min MHz:          600.0000
+    BogoMIPS:             38.40
+    Flags:                fp asimd evtstrm crc32 cpuid
+Caches (sum of all):      
+  L1d:                    128 KiB (4 instances)
+  L1i:                    128 KiB (4 instances)
+  L2:                     512 KiB (1 instance)
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Not affected
+  Spectre v1:             Mitigation; __user pointer sanitization
+  Spectre v2:             Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+  Vmscape:                Not affected
+```
+
+Number of cores
+```
+yorkearwaker@localhost:~$ nproc
+4
+```
+
+Log out of ssh session
+```
+yorkearwaker@localhost:~$ exit
+logout
+Connection to <your-rpi-sbc-ip-address> closed.
+```
+
+#### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero RPi Trixie
+From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspberry Pi Zero running RPi Trixie 'the deployment target' OS.
+* TBD
+* SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS operating system
+* SSH server on RPi Zero 2 W hardware running RPi Trixie operating system
+* Query some of the RPi Zero specification information
+```
+TBD
+```
 
 ## References
 
