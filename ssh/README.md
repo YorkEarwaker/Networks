@@ -36,6 +36,7 @@ TODO
 * <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verify possibility yes or no, >
 * <todo: consider, ssh login to RPi Z Ubuntu Core 24 from Dell Ubuntu 24 LTS, >
 * <todo: consider, install sshd server on RPi Trixie, login from ssh client on Dell Ubuntu 24 LTS, >
+* <todo: consider, detail dev to prod workflows which will differ for RPi Trixie and Ubuntu Core and Ubuntu Server, headless,  e.g. Ubuntu Core require snap of new app/functoinality to be added to OS image? , RPi Trixie workflow likely more similar to Ubuntu Server although these likely have some wf activity detail differences?  move this else where? where? PMO? PPM? DevOps? to start document as things are accomplished but where to put docs info?, >
 
 DONE
 * <done: consider, intent to commit >
@@ -55,8 +56,7 @@ Context diagram
 * Client software, installed on an operating system on a hardware device (i.e. ssh)
 * Server software, installed on an operating system on a hardware device (i.e sshd)
 * Device operating system may have installed on it both client software and server software
-```
-      Client --------------------- Network ------------------- Server
+```t
 ```
 
 Interaction diagram
