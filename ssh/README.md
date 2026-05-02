@@ -16,6 +16,9 @@ AGW project requirements.
 * ...
 
 Use Cases - ssh high level use cases for IoT/IIoT
+* <todo: consider, these are actually business scenarios/buiness use cases, refactor accordingly, find other suitable names for same which might apply, >
+* <todo: condider, matrix against which to place tech software or hwardware which will be used against each business scenario, e.g. ssh clearly aligns with each busienss scenario, multiple use cases likely in each business scenario for use of ssh, use case is a workflow/business process within the business scenario, >
+* <todo: consider, create a 'strategy and architecture' repo, find better name, for enterprise views of AGW project, elaborate these in first instance, >
 ```
 * Use case; 01, development, systems engineering in the lab/field,        making,      Test
 * Use case; 02; manufacture, systems assembly line in the factory/plant,  producing,   Quality Assurance
@@ -134,7 +137,7 @@ see
 ### Dell Ubuntu LTS - laptop dev host
 * TBD
 * <todo: consider, dev use cases above with RPi Zero running RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
-* <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
+* <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. is it managed service for LTS or not? in which case openssh client and server would have to be sintalled in this env. >
 * <todo: consider, other use cases for ssh with wider server side IT platfrom estate for AGW project, very many, >
 * <todo: consider, unintall openssh-client from Dell Ubuntu LTS, how might it comflict with Ubuntu snap-based SSH service, >
 
