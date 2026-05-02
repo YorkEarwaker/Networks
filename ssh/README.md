@@ -34,15 +34,16 @@ TODO
 * <todo: consider, ssh appropriate for all use cases listed in notes above, might be secondary not primary in some cases, i.e. REST in some/most operations and servicing? ponder more, >
 * <todo: consider, not ssh, REST so place elsewhere 'applications repo?', REST example see GitHub personal access tokens, for IIoT example see home electricity smart meters, REST use cases for the AGW project, >
 * <todo: consider, ssh for RPi Pico MCU, search for available libs? or would footprint be to large and processing to expensive in MCU env? bare metal ssh? probs not, find use case, verify possibility yes or no, >
-* <todo: consider, ssh login to RPi Z Ubuntu Core 24 from Dell Ubuntu 24 LTS, >
 * <todo: consider, install sshd server on RPi Trixie, login from ssh client on Dell Ubuntu 24 LTS, >
 * <todo: consider, detail dev to prod workflows which will differ for RPi Trixie and Ubuntu Core and Ubuntu Server, headless,  e.g. Ubuntu Core require snap of new app/functoinality to be added to OS image? , RPi Trixie workflow likely more similar to Ubuntu Server although these likely have some wf activity detail differences?  move this else where? where? PMO? PPM? DevOps? to start document as things are accomplished but where to put docs info?, >
+* <todo: consider, ubuntu server ssh example, prerequisite Ubuntu Server OS image installed on MicroSd Card, headline as reminder too below  >
 
 DONE
 * <done: consider, intent to commit >
 * <done: consider generic use case diagrams? generic context diagram? generic interaction diagram? wip>
 * <done: consider, for Rpi Zero 2 W, check if ssh server (sshd) is installed on RPi Trixi and Ubuntu Core 24, install if not, setup to enable login via Dell Ubuntu ssh client (ssh), different mechanisms to install and manage ssh in both OS's, so different workflows required, >
 * <done: consider, dev use cases above with RPi Zero running Ubuntu Core, for initial dev ssh workflow for AGW project, sensor device making, ssh logon from Dell Ubuntu LTS dev host to RPi Zero Ubuntu Core 4 deployment target, ssh logon success, other dev tasks for this workflow wip, >
+* <done: consider, ssh login to RPi Z Ubuntu Core 24 from Dell Ubuntu 24 LTS, >
 
 ## Output
 * Using ssh for access to embedded systems like Raspberry Pi single board computers SBC's.
@@ -56,7 +57,14 @@ Context diagram
 * Client software, installed on an operating system on a hardware device (i.e. ssh)
 * Server software, installed on an operating system on a hardware device (i.e sshd)
 * Device operating system may have installed on it both client software and server software
-```t
+* Box's might be; cloud container, virtual machine, hardware like a server blade or laptop or tablet or ...
+* Box's, while often separate hardware devices, all have OS execution env into which ssh/sshd is preinstalled or must be installed separately
+```
+     --------                                                 --------  
+    |  Box 1 |                     elided                    |  Box 2 |
+    | Client | ------------------- Network ----------------- | Server |
+    |  ssh   |                                               |  sshd  |
+     --------                                                 --------
 ```
 
 Interaction diagram
@@ -117,8 +125,8 @@ $ dpkg -l |grep openssh-server
 ```
 
 ### Ubuntu Core 24 - embedded SBC OS deployment target
-* Success! Completed during install.
-* SSH key setup prior to installation of the OS. SSH key is required during installation process.
+* Status: Success! Completed during install.
+* SSH key setup prior to installation of the OS on MicroSD Card. SSH key is required during installation process.
 * Core uses a SSH snap built in, managed service by core system. snap-based SSH service.
 * <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. >
 * <todo: consider, review 'snap set' commands to manage ssh snap configuration, find Ubuntu docs for same, >
@@ -128,14 +136,22 @@ see
 * Ubuntu One SSH
 
 ### Raspberry Pi Trixie - embedded SBC OS deployment target
-* TBD
+* Status: TBD
 * <todo: consider, tasks to accomplish ssh access to RPi Trixie SBC from Dell Ubuntu dev box, >
 * <todo: consider, confirm standard openssh-server use, standard /etc/ssh/sshd_config file, >
 * <todo: consider, RPi docs for ssh into Trixie OS, >
 * <todo: consider, bau dev workflow for ssh with RPi Trixie, use AGW project rpi-z/cpa/snr-rsl as examplar, >
 
+
+### Ubuntu Server - embedded? SBC OS deployment target
+* Status: TBD
+* <todo: consider, probably not embedded deployment target, likely just sever farms, what could be stripped out, might require bespoke compilaton of the server code base, keep under review, >
+* <todo: consider, source or do benchmarking for comparison of RPi Trixi and Ubuntu Core and Ubuntu Server, for various embedded targets,  >
+* <todo: consider, likely not snap based SSH service, so would require openssh-client openssh-server install, verify this? >
+* ...
+
 ### Dell Ubuntu LTS - laptop dev host
-* TBD
+* Status: TBD
 * <todo: consider, dev use cases above with RPi Zero running RPi Trixie, for initial dev ssh workflow for AGW project, sensor device making,  >
 * <todo: consider, review in more detail Ubuntu client/server built in managed service in core system. is it managed service for LTS or not? in which case openssh client and server would have to be sintalled in this env. >
 * <todo: consider, other use cases for ssh with wider server side IT platfrom estate for AGW project, very many, >
@@ -147,6 +163,7 @@ From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspbe
 * SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS Gnome operating system
 * SSH server on RPi Zero 2 W hardware running Ubuntu Core 24 operating system
 * Query some of the RPi Zero specifications information
+
 ```
 york-earwaker@york-earwaker-XPS-15-9560:~$ ssh yorkearwaker@<your-rpi-sbc-ip-address>
 Welcome to Ubuntu Core 24
@@ -272,10 +289,21 @@ Connection to <your-rpi-sbc-ip-address> closed.
 
 #### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero RPi Trixie
 From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspberry Pi Zero running RPi Trixie 'the deployment target' OS.
-* TBD
+* Status: TBD
 * SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS operating system
 * SSH server on RPi Zero 2 W hardware running RPi Trixie operating system
 * Query some of the RPi Zero specification information
+```
+TBD
+```
+
+#### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero Ubuntu Server
+From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspberry Pi Zero running Ubuntu Server 'the deployment target' OS.
+* Status: TBD
+* SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS operating system
+* SSH server on RPi Zero 2 W hardware running Ubuntu Server operating system
+* Query some of the RPi Zero specification information
+* <todo: consider, Ubuntu Server 26 for start of evaluation of new release, >
 ```
 TBD
 ```
