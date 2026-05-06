@@ -16,10 +16,12 @@ TODO
 * <todo: consider, curl project, how can it be used in relation to AGW project in general, specifivally curl to Raspberry Pi SBC's and other embedded system, >
 * <todo: consider, vnc for remote access, RPi Trixie in first instance on RPi Zero, is vnc access possible with Ubunut Core tbd? in which use cases would vnc beneficial for AGW project? in which use cases would vnc be prefereable to ssh? >
 * <todo: consider, AGW organisation 'enterprise' network use cases, many, see ssh project for some identified, to identify others, >
+* <todo: consider, AGW org h2h communications concerns, many, find GDPR compliant instances, explore Jitsi as candidate solutions or building blocks, /tsi? sub project, prioritise FOSS, LFP options, attempt convergence with Cannonical/Ubutntu/Debian in first instance, look also at RPi re same, others tbc? >
+* <todo: consider, AGW org m2m communications concerns, automation, system and software updates, others, stub >
 
 DONE
-* <done: intent to commit>
-* <done: choose a project, ssh>
+* <done: consider, intent to commit>
+* <done: consider, choose a project, ssh, first cut Ubuntu Core and One SSH, wip >
 * <done: consider, ssh project, specifically in relation to AGW project and ssh to Raspberry Pi SBC's and other embedded system, headless access, priority for devsecops for AGW projects, wip>
 
 ## Libraries
@@ -36,6 +38,9 @@ Remote access, file transfer
 * curl [WS](https://curl.se/), book [WS](https://everything.curl.dev/), docs - tutorial [WS](https://curl.se/docs/tutorial.html)
 * SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 * VNC, virtual network computing 
+
+h2h coms - VoIP, SIP, p2p, IP4, IP6, video, instant messaging dm's, ... like kinds of thing,  
+* Jitsi, [WP](https://en.wikipedia.org/wiki/Jitsi), see instances fairmeeting & fairkom for GDPR compliance, similar kinds of thing Zoom, WebEx, 
 
 ## Output
 
