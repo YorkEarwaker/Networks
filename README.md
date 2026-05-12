@@ -39,7 +39,7 @@ Remote access, file transfer
 * SSH, secure shell [WP](https://en.wikipedia.org/wiki/Secure_Shell), org [WS](https://www.ssh.com/academy/ssh), application layer protocol, software package that enables secure system administration and file transfer over insecure networks.
 * VNC, virtual network computing 
 
-h2h coms - VoIP, SIP, p2p, IP4, IP6, video, instant messaging dm's, ... like kinds of thing,  
+h2h coms - VoIP, SIP, p2p, IP4, IP6, video, instant messaging dm's, ... like kinds of thing, 
 * Jitsi, [WP](https://en.wikipedia.org/wiki/Jitsi), see instances fairmeeting & fairkom for GDPR compliance, similar kinds of thing Zoom, WebEx, 
 
 ## Output
