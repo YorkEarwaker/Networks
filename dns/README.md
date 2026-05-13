@@ -38,12 +38,7 @@ home labs, routers, simple networks, small LANs, embedded devices
 
 Init service
 * systemd [WP](https://en.wikipedia.org/wiki/Systemd), in Ubuntu
-* systemd-resolved, fully featured dns resolver service, in Ubuntu v16 replaced resolvconf### Services
-
-Proprietary
-* OpenDNS, upstream filtering/resolution, US
-* ICAN?
-* Whois? 
+* systemd-resolved, fully featured dns resolver service, in Ubuntu v16 replaced resolvconf 
 
 enterprise - are all these enterprise grade?
 * bind, complex large scale deployments, full stack dns server both roles as recursive resolver and limited authoritative server zones
@@ -117,3 +112,6 @@ Lists - catalogues
 * Comparison of DNS server software, [WP](https://en.wikipedia.org/wiki/Comparison_of_DNS_server_software)
 * Comparison of DHCP server software, 
 * ...
+
+
+
