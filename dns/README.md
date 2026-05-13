@@ -53,7 +53,7 @@ enterprise - are all these enterprise grade?
 * ...
 
 dns configuration framework, for managing /etc/resolv.conf file, security concerns, 
-* openresolv, BDS, written in POSIX shell, drop in replacement for Debian resolvconf,S better maintained?
+* openresolv, BDS, written in POSIX shell, drop in replacement for Debian resolvconf, better maintained?
 * resolvconf, [WP](https://en.wikipedia.org/wiki/Resolvconf), GPL, requires Bash shell,
 
 ### Services
@@ -65,20 +65,31 @@ Proprietary
 
 ## Scenarios
 Different usage scenarios, 
+* keeping in mind AGW project and need for embedded
+* more general use cases for DNS 
 
 ### Linux - embedded - Debian, RPi OS,
 Both dnsmasq and smart dns are 
 * complementary, 
 * Raspberry Pi compatible, 
+* <todo: consider, consolidate over same tech stack for DNS for RPi OS and Ubundu Core, A N Other embedded hardware, >
 
 ### Linux - embedded - Ubuntu Core
 Both dnsmasq and smart dns may cause conflicts
-* snap constraints make use in Ubuntu Core difficult
+* Core immutable architecture snap constraints make use in Ubuntu Core difficult
 * Ubuntu core uses systemd
 * systemd won't cover all use cases of dnsmasq or smart dns? confirm. how to mitigate.
 
+Recommended snaps to use with Ubuntu Core, 
+* coreDNS
+* pi-hole 
+* unbound
+* <todo: consider, validate these options as good for Core, good for embedded, any other candidates? >
+* <todo: consider, consolidate over same tech stack for DNS for RPi OS and Ubuntu Core, is this possible, >
+
 ### Linux - desktop/server - Debian, Ubuntu, other
-use to block domain names.
+Use dnsmasq to block domain names, maintain sanity in a world driven made by the compression of time and space by social transition from analogue to digital.
+* I preferred the world when there were only analogue telco landlines
 
 ## Output
 Examples of how to use dns and dhcp tools 
