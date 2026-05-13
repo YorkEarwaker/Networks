@@ -75,9 +75,10 @@ Both dnsmasq and smart dns are
 Both dnsmasq and smart dns may cause conflicts
 * snap constraints make use in Ubuntu Core difficult
 * Ubuntu core uses systemd
+* systemd won't cover all use cases of dnsmasq or smart dns? confirm. how to mitigate.
 
 ### Linux - desktop/server - Debian, Ubuntu, other
-? 
+use to block domain names.
 
 ## Output
 Examples of how to use dns and dhcp tools 
