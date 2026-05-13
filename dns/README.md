@@ -244,6 +244,7 @@ $ NetworkManager -V
 Several options
 
 Redirect to Null IP
+* Failure :( to block address, wip
 * Block a domain by resolving it to 0.0.0.0 or 127.0.0.1:
 * address=/example.com/0.0.0.0
 * add key value below to /etc/dnsmasq.conf file
