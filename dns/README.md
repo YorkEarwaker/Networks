@@ -11,7 +11,7 @@ Objectives
 Learning 
 * use as a means of deeper understanding of dns and dhcp for ldap and similar network services
 * use as a means of deeper understanding of relation to IPv4 & IPv6
-* use as a means of deeper understanding of other IETF specifications, 
+* use as a means of deeper understanding of other IETF specifications,  
 
 ## Status
 TODO
@@ -92,6 +92,11 @@ Examples of how to use dns and dhcp tools
 * <todo: consider, allow list, permitted, heading example, >
 
 ### dnsmasq
+Status: WIP
+* dnsmasq, progress, wip
+* dnsmasq, issues ongoing, capability/skills gap to overcome,
+* dnsmasq, not achieved first objective of blocking a domain name as of 2026.05.14, 2nd day of finding things out.
+* <todo: consider, find possible conflict issues with systemd-resolv Ubuntu OS DNS resolver, >
 
 Install dnsmasq - generates config files and others
 ```
@@ -252,9 +257,9 @@ May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Dropped protocol sp>
 May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Failed to set DNS c>
 May 14 10:09:40 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service ->
 
-york-earwaker@york-earwaker-XPS-15-9560:~$ sudo systemctl stop dnsmasq.service
+$ sudo systemctl stop dnsmasq.service
 
-york-earwaker@york-earwaker-XPS-15-9560:~$ systemctl status dnsmasq
+$ systemctl status dnsmasq
 ○ dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
      Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled; preset: >
      Active: inactive (dead) since Thu 2026-05-14 10:56:35 BST; 13s ago
@@ -273,7 +278,7 @@ May 14 10:56:35 york-earwaker-XPS-15-9560 resolvconf[8739]: Failed to revert in>
 May 14 10:56:35 york-earwaker-XPS-15-9560 dnsmasq[1933]: exiting on receipt of >
 May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: dnsmasq.service: Deactiva>
 May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: Stopped dnsmasq.service ->
-york-earwaker@york-earwaker-XPS-15-9560:~$ 
+$ 
 ```
 
 For debugging dnsmasq
@@ -332,6 +337,32 @@ dnsmasq: 10 127.0.0.1/5353 forwarded query to 127.0.0.53
 dnsmasq: 11 127.0.0.1/5353 forwarded query to 127.0.0.53
 dnsmasq: 12 127.0.0.1/5353 forwarded query to 127.0.0.53
 dnsmasq: exiting on receipt of SIGTERM
+```
+
+View logs
+* Use Ctrl+C to exit back to main prompt.
+* Ctrl+C appears as `^C` in terminal cli.
+```
+$ sudo journalctl -u dnsmasq -f
+[sudo] password for york-earwaker: 
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: read /etc/hosts - 81 names
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Dropped protocol specifier '.dnsmasq' from 'lo.dnsmasq'. Using 'lo' (ifindex=1).
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Failed to set DNS configuration: Unit dbus-org.freedesktop.network1.service not found.
+May 14 10:09:40 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server.
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: Stopping dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server...
+May 14 10:56:35 york-earwaker-XPS-15-9560 resolvconf[8739]: Dropped protocol specifier '.dnsmasq' from 'lo.dnsmasq'. Using 'lo' (ifindex=1).
+May 14 10:56:35 york-earwaker-XPS-15-9560 resolvconf[8739]: Failed to revert interface configuration: Unit dbus-org.freedesktop.network1.service not found.
+May 14 10:56:35 york-earwaker-XPS-15-9560 dnsmasq[1933]: exiting on receipt of SIGTERM
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: dnsmasq.service: Deactivated successfully.
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: Stopped dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server.
+^C
+```
+
+View logs
+* Use Ctrl+C to exit back to main prompt.
+```
+$ sudo tail -f /var/log/syslog | grep dnsmasq
+^C
 ```
 
 For production and service management dnsmasq
