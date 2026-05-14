@@ -11,7 +11,7 @@ Objectives
 Learning 
 * use as a means of deeper understanding of dns and dhcp for ldap and similar network services
 * use as a means of deeper understanding of relation to IPv4 & IPv6
-* use as a means of deeper understanding of other IETF specifications,  
+* use as a means of deeper understanding of other IETF specifications,
 
 ## Status
 TODO
@@ -97,7 +97,7 @@ Status: WIP
 * dnsmasq, issues ongoing, capability/skills gap to overcome,
 * dnsmasq, not achieved first objective of blocking a domain name as of 2026.05.14, 2nd day of finding things out.
 * <todo: consider, find possible conflict issues with systemd-resolv Ubuntu OS DNS resolver, >
-* <todo: there might be conflicts with dnsmasq and Brave Filters, Brave Filters don't seem to be working in the same way since dnsmasq was installed even though it is inactive, or it may just be browser caching issues, wip >
+* <todo: consider, conflicts with dnsmasq and Brave Filters, Brave Filters are not working in the same way since dnsmasq was installed even when it is inactive, or it may just be browser caching issues, wip >
 
 Install dnsmasq - generates config files and others
 ```
@@ -374,6 +374,18 @@ For production and service management dnsmasq
 $ dnsmasq --keep-in-foreground --conf-file=/etc/dnsmasq.conf
 ```
 
+Disable dnsmasq as a service
+* stop the service, if it is running
+* disable the service
+* check status
+* <todo: consider, check if it can still be run as --no-daemon?>
+* <todo: consider, check if disabling as a service resolves Brave shields custom filter issue, try reboot and test custom filters, >
+```
+$ sudo systemctl stop dnsmasq
+$ sudo systemctl disable dnsmasq
+$ systemctl status dnsmasq
+```
+
 /etc/resolv.conf
 * suggested change value to 127.0.0.1 of key nameserver 
 * Brave Search Leo
@@ -401,7 +413,7 @@ Redirect to Null IP
 ```
 conf-file=/etc/dnsmasq.d/blocklist.conf # ye, was added, 
 ```
-Restart dnsmasq, after the inclusion of the conf-file entry to dnsmasq.conf configuation file above.
+Restart dnsmasq, after the inclusion of the conf-file entry to dnsmasq.conf configuration file above.
 * before restarting dnsmasq optionally test the configuration file without starting the service, see elsewhere in this page
 * or test the configuration as a first debug step if the dnsmasq service returns errors and does not start
 ```
