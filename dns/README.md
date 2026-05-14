@@ -185,6 +185,7 @@ dhcp-range=192.168.1.100,192.168.1.200,12h: Enables DHCP with a specific IP rang
 ```
 
 Validate /etc/dnsmasq.conf file changes, above
+* Test the configuration without starting the service
 ```
 $ sudo dnsmasq --test
 dnsmasq: syntax check OK.
@@ -224,14 +225,129 @@ May 13 17:21:45 york-earwaker-XPS-15-9560 resolvconf[38062]: Failed to set DNS >
 May 13 17:21:45 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service ->
 ```
 
+Stop the dnsmasq service
+* check the status of the service to query whether it was started and is 'active'
+* stop the service, '$ sudo systemctl stop dnsmasq.service'
+* check the status of the service to ensure it was stopped and is 'inactive'
+```
+$ systemctl status dnsmasq
+● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled; preset: >
+     Active: active (running) since Thu 2026-05-14 10:09:40 BST; 44min ago
+   Main PID: 1933 (dnsmasq)
+      Tasks: 1 (limit: 38074)
+     Memory: 3.0M (peak: 5.5M)
+        CPU: 71ms
+     CGroup: /system.slice/dnsmasq.service
+             └─1933 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -r>
+
+May 14 10:09:40 york-earwaker-XPS-15-9560 systemd[1]: Starting dnsmasq.service >
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: started, version 2.90 >
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: compile time options: >
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq-dhcp[1933]: DHCP, IP range 19>
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: using nameserver 192.1>
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: bad address at /etc/ho>
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: read /etc/hosts - 81 n>
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Dropped protocol sp>
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Failed to set DNS c>
+May 14 10:09:40 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service ->
+
+york-earwaker@york-earwaker-XPS-15-9560:~$ sudo systemctl stop dnsmasq.service
+
+york-earwaker@york-earwaker-XPS-15-9560:~$ systemctl status dnsmasq
+○ dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled; preset: >
+     Active: inactive (dead) since Thu 2026-05-14 10:56:35 BST; 13s ago
+   Duration: 46min 55.421s
+    Process: 8735 ExecStop=/usr/share/dnsmasq/systemd-helper stop-resolvconf (c>
+   Main PID: 1933 (code=exited, status=0/SUCCESS)
+        CPU: 82ms
+
+May 14 10:09:40 york-earwaker-XPS-15-9560 dnsmasq[1933]: read /etc/hosts - 81 n>
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Dropped protocol sp>
+May 14 10:09:40 york-earwaker-XPS-15-9560 resolvconf[1944]: Failed to set DNS c>
+May 14 10:09:40 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service ->
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: Stopping dnsmasq.service >
+May 14 10:56:35 york-earwaker-XPS-15-9560 resolvconf[8739]: Dropped protocol sp>
+May 14 10:56:35 york-earwaker-XPS-15-9560 resolvconf[8739]: Failed to revert in>
+May 14 10:56:35 york-earwaker-XPS-15-9560 dnsmasq[1933]: exiting on receipt of >
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: dnsmasq.service: Deactiva>
+May 14 10:56:35 york-earwaker-XPS-15-9560 systemd[1]: Stopped dnsmasq.service ->
+york-earwaker@york-earwaker-XPS-15-9560:~$ 
+```
+
+For debugging dnsmasq
+* Run dnsmasq in debug mode in the foreground in the terminal cli to view operations
+* $ sudo dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /path/to/dnsmasq.conf
+```
+$ sudo dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /etc/dnsmasq.conf
+dnsmasq: started, version 2.90 cachesize 150
+dnsmasq: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth cryptohash DNSSEC loop-detect inotify dumpfile
+dnsmasq-dhcp: DHCP, IP range 192.168.0.50 -- 192.168.0.150, lease time 12h
+dnsmasq: using nameserver 192.168.0.1#53 for domain localnet 
+dnsmasq: reading /etc/resolv.conf
+dnsmasq: using nameserver 192.168.0.1#53 for domain localnet 
+dnsmasq: using nameserver 127.0.0.53#53
+dnsmasq: bad address at /etc/hosts line 436
+dnsmasq: read /etc/hosts - 81 names
+dnsmasq: 1 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 2 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 3 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 4 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 5 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 6 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 7 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 8 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 9 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 10 127.0.0.1/5353 forwarded query to 127.0.0.53
+```
+
+Exit (kill the process) when started as dnsmasq --no-daemon
+* In a separate terminal window run
+* SIGTERM kills the process in a graceful way, instead of direct kill or kill -9 command
+* SIGTERM is not a standalone command but a signal, signal number 15
+* SIGTERM is used to send to a process to get theprocess to gracefully terminate
+* SIGTERM is used by supplying an argument to the kill command, kill -TERM <PID> or kill -15 <PID>
+* The PID is the second value returned from the command, ps aux | grep process_name
+* <todo: consider, investigate york-ea+ line as this remains after process termination>
+```
+$ ps aux | grep dnsmasq
+root        9064  0.0  0.0  19664  7492 pts/0    S+   11:04   0:00 sudo dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /etc/dnsmasq.conf
+root        9065  0.0  0.0  19664  2576 pts/1    Ss   11:04   0:00 sudo dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /etc/dnsmasq.conf
+root        9066  0.0  0.0  17080  5584 pts/1    S+   11:04   0:00 dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /etc/dnsmasq.conf
+york-ea+   10200  0.0  0.0   9152  2272 pts/2    S+   11:29   0:00 grep --color=auto dnsmasq
+
+$ SIGTERM 9064
+SIGTERM: command not found
+
+$ kill -TERM 9064
+
+$ ps aux | grep dnsmasq
+york-ea+   10446  0.0  0.0   9152  2272 pts/2    S+   11:37   0:00 grep --color=auto dnsmasq
+```
+* The output in the original terminal window where dnsmasq was started as --no-daemon
+* The process exits with acknowledgment of SIGTERM process termination
+```
+dnsmasq: 10 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 11 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: 12 127.0.0.1/5353 forwarded query to 127.0.0.53
+dnsmasq: exiting on receipt of SIGTERM
+```
+
+For production and service management dnsmasq
+* Run dnsmasq in the foreground in the terminal cli to view operations
+* $ dnsmasq --keep-in-foreground --conf-file=/path/to/dnsmasq.conf
+* <todo: consider, test this, not yet attempted, >
+```
+$ dnsmasq --keep-in-foreground --conf-file=/etc/dnsmasq.conf
+```
+
 /etc/resolv.conf
 * suggested change value to 127.0.0.1 of key nameserver 
 * Brave Search Leo
 * This has not been done, 
 * <todo: consider, do this>
 * <todo: consider, systemd-resolv conflicts, >
-
-
 
 ### NetworkManager
 
@@ -252,6 +368,12 @@ Redirect to Null IP
 * restart the dnsmasq service
 ```
 conf-file=/etc/dnsmasq.d/blocklist.conf # ye, was added, 
+```
+Restart dnsmasq, after the inclusion of the conf-file entry to dnsmasq.conf configuation file above.
+* before restarting dnsmasq optionally test the configuration file without starting the service, see elsewhere in this page
+* or test the configuration as a first debug step if the dnsmasq service returns errors and does not start
+```
+$ sudo systemctl restart dnsmasq
 ```
 
 ## References
