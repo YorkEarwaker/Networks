@@ -226,9 +226,9 @@ May 13 17:21:45 york-earwaker-XPS-15-9560 systemd[1]: Started dnsmasq.service ->
 ```
 
 Stop the dnsmasq service
-* check the status of the service to query whether it was started and is 'active'
-* stop the service, '$ sudo systemctl stop dnsmasq.service'
-* check the status of the service to ensure it was stopped and is 'inactive'
+* check the status of the service to query whether it was started and is `active`
+* stop the service, `$ sudo systemctl stop dnsmasq.service`
+* check the status of the service to ensure it was stopped and is `inactive`
 ```
 $ systemctl status dnsmasq
 ● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
