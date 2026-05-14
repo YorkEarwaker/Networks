@@ -380,11 +380,14 @@ Disable dnsmasq as a service
 * check status
 * <todo: consider, check if it can still be run as --no-daemon?>
 * <todo: consider, check if disabling as a service resolves Brave shields custom filter issue, try reboot and test custom filters, >
+* <todo: consider, edit out dnsmasq from NetworkManager conf file, restart NetworkManager NM, so that dnsmasq does not get restarted by NM, >
 ```
 $ sudo systemctl stop dnsmasq
 $ sudo systemctl disable dnsmasq
 $ systemctl status dnsmasq
 ```
+
+
 
 /etc/resolv.conf
 * suggested change value to 127.0.0.1 of key nameserver 
