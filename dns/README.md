@@ -197,7 +197,7 @@ $ sudo systemctl restart dnsmasq
 ```
 
 Status of dnsmasq service
-* Success! at least in part
+* Success! :| at least in part
 ```
 $ systemctl status dnsmasq
 ● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
@@ -306,10 +306,10 @@ Exit (kill the process) when started as dnsmasq --no-daemon
 * In a separate terminal window run
 * SIGTERM kills the process in a graceful way, instead of direct kill or kill -9 command
 * SIGTERM is not a standalone command but a signal, signal number 15
-* SIGTERM is used to send to a process to get theprocess to gracefully terminate
-* SIGTERM is used by supplying an argument to the kill command, kill -TERM <PID> or kill -15 <PID>
-* The PID is the second value returned from the command, ps aux | grep process_name
-* <todo: consider, investigate york-ea+ line as this remains after process termination>
+* SIGTERM is used to send to a process to get the process to gracefully terminate
+* SIGTERM is used by supplying an argument '-TERM' or '-15' to the kill command, 'kill -TERM \<PID\>' or 'kill -15 \<PID\>'
+* The PID is the second value returned from the command, ps aux | grep process_name, '9064' in this instance
+* <todo: consider, investigate york-ea+ line as this remains after process termination, don't understand what this is, >
 ```
 $ ps aux | grep dnsmasq
 root        9064  0.0  0.0  19664  7492 pts/0    S+   11:04   0:00 sudo dnsmasq --no-daemon --log-queries=extra --log-dhcp --log-debug -C /etc/dnsmasq.conf
