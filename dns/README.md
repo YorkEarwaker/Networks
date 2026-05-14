@@ -97,6 +97,7 @@ Status: WIP
 * dnsmasq, issues ongoing, capability/skills gap to overcome,
 * dnsmasq, not achieved first objective of blocking a domain name as of 2026.05.14, 2nd day of finding things out.
 * <todo: consider, find possible conflict issues with systemd-resolv Ubuntu OS DNS resolver, >
+* <todo: there might be conflicts with dnsmasq and Brave Filters, Brave Filters don't seem to be working in the same way since dnsmasq was installed even though it is inactive, or it may just be browser caching issues, wip >
 
 Install dnsmasq - generates config files and others
 ```
@@ -312,7 +313,7 @@ Exit (kill the process) when started as dnsmasq --no-daemon
 * SIGTERM kills the process in a graceful way, instead of direct kill or kill -9 command
 * SIGTERM is not a standalone command but a signal, signal number 15
 * SIGTERM is used to send to a process to get the process to gracefully terminate
-* SIGTERM is used by supplying an argument `-TERM` or `-15` to the kill command, `kill -TERM \<PID\>` or `kill -15 \<PID\>`
+* SIGTERM is used by supplying an argument `-TERM` or `-15` to the kill command, `kill -TERM <PID>` or `kill -15 <PID>`
 * The PID is the second value returned from the command, ps aux | grep process_name, `9064` in this instance
 * <todo: consider, investigate york-ea+ line as this remains after process termination, don't understand what this is, >
 ```
