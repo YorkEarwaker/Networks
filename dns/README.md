@@ -98,6 +98,7 @@ Status: WIP
 * dnsmasq, not achieved first objective of blocking a domain name as of 2026.05.14, 2nd day of finding things out.
 * <todo: consider, find possible conflict issues with systemd-resolv Ubuntu OS DNS resolver, >
 * <todo: consider, conflicts with dnsmasq and Brave Filters, Brave Filters are not working in the same way since dnsmasq was installed even when it is inactive, or it may just be browser caching issues, wip >
+* Brave Community Topic created, Brave shields custom content filters and dnsmasq, [WS](https://community.brave.app/t/brave-shields-custom-content-filters-and-dnsmasq/653033), 2026.05.14
 
 Install dnsmasq - generates config files and others
 ```
@@ -385,6 +386,14 @@ Disable dnsmasq as a service
 $ sudo systemctl stop dnsmasq
 $ sudo systemctl disable dnsmasq
 $ systemctl status dnsmasq
+```
+* After reboot, dnsmasq status reported `disabled` and `inactive`
+* <todo: consider, issues remain with Brave Shields Customer Content Filters, might this be corolation and not causation? >
+```
+$ systemctl status dnsmasq
+○ dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; disabled; preset:>
+     Active: inactive (dead)
 ```
 
 
