@@ -98,7 +98,7 @@ Status: WIP
 * dnsmasq, not achieved first objective of blocking a domain name as of 2026.05.14, 2nd day of finding things out.
 * <todo: consider, find possible conflict issues with systemd-resolv Ubuntu OS DNS resolver, >
 * <todo: consider, conflicts with dnsmasq and Brave Filters, Brave Filters are not working in the same way since dnsmasq was installed even when it is inactive, or it may just be browser caching issues, wip >
-* Brave Community Topic created, Brave shields custom content filters and dnsmasq, [WS](https://community.brave.app/t/brave-shields-custom-content-filters-and-dnsmasq/653033), 2026.05.14
+* Brave Community Topic created, Brave shields custom content filters not working and dnsmasq, [WS](https://community.brave.app/t/brave-shields-custom-content-filters-not-working-and-dnsmasq/653033), 2026.05.14
 
 Install dnsmasq - generates config files and others
 ```
