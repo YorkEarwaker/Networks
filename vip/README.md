@@ -1,6 +1,6 @@
 # Voice over IP vip
 
-Telephone calls using internet protocol stack. Also know as; VoIP, softphone, .
+Telephone calls using internet protocol stack. Also know as; VoIP, IP telephony, softphone, .
 
 ## Notes
 
@@ -8,7 +8,6 @@ Objectives
 * communicate with family and friends
 * communicate with co workers
 * for use in AGW project coms deliverables
-* ...
 
 Functional requirements
 * SIP compliant?
@@ -24,6 +23,7 @@ TODO
 * <todo: consider, Jami for P2P serverless, >
 * <todo: consider, collate functional requirements for client software, > 
 * <todo: consider, use case list for cleint software, see objective under notes in first instance, >
+* <todo: consider, mobile telephony use of voip, 4G, 5G, >
 
 DONE
 * <done: consider, intent to commit, >
@@ -59,30 +59,30 @@ Terms
 
 Standards - voip, functional requirement candidates 
 * SRTP encryption, media
-* TLS encryption, signaling
 * E2EE end to end encryption, 
 * P2P, peer to peer
 * PBX, 
-* STUN, protocol
-* TURN, protocol
-* ICE, protocol
+* STUN, Session Transmission Utilities for NAT, IETF, RFC; 3489, 5389 .
+* TURN, Traversals Using Relays around NAT, IETF? 
+* ICE, Interactive Connectivity Establishment, IETF? 
 * NAT, Network Address Transmission, 
 * SFU, 
 * DHT, 
 * ...
 
-Signaling protocol
-* SIP, Session Initiated Protocol,
+Signaling protocol - including internet protocol suite,
+* SIP, Session Initiated Protocol, application layer, 
 * SCCP, Skinny Client Control Protocol, Cisco, proprietary, 
 * H.323, 
 
-Media protocol
-* RTP, Real-time Transport Protocol, over UDP, transport of audio and video codec encoded data, media packet, 
+Media protocol - including internet protocol suite, 
+* RTP, Real-time Transport Protocol, application layer, over UDP, transport of audio and video codec encoded data, media packet, 
 * RTCP, Real-time Transport Control Protocol, statistical data about call quality, sibling protocol to RTP, 
 
-Network protocol - voip uses these IETF internet protocols to run over, OSI ISO 7 layer model
-* TCP, Transmission Control Protocol
-* UDP, User Datagram Protocol
+Network protocol - including internet protocol suite, 
+* TLS, Transport Layer Security, application layer, encryption, signaling, IETF
+* TCP, Transmission Control Protocol, transport layer, IETF 
+* UDP, User Datagram Protocol, transport layer, IETF
 
 News Papers - voip
 * An introduction to VoIP for sysadmins, [WS](https://www.redhat.com/en/blog/introduction-voip), 7 January 2020, RedHat, 
