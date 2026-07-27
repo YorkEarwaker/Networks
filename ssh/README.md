@@ -37,6 +37,10 @@ TODO
 * <todo: consider, install sshd server on RPi Trixie, login from ssh client on Dell Ubuntu 24 LTS, >
 * <todo: consider, detail dev to prod workflows which will differ for RPi Trixie and Ubuntu Core and Ubuntu Server, headless,  e.g. Ubuntu Core require snap of new app/functoinality to be added to OS image? , RPi Trixie workflow likely more similar to Ubuntu Server although these likely have some wf activity detail differences?  move this else where? where? PMO? PPM? DevOps? to start document as things are accomplished but where to put docs info?, >
 * <todo: consider, ubuntu server ssh example, prerequisite Ubuntu Server OS image installed on MicroSd Card, headline as reminder too below  >
+* <todo: consider, SSH over Serial Bridge Chip sbc device interface between Ubuntu 24 dev env and Single Board Computer SBC device likely rpi z2w in first instance, dependency likely one of, PPP, SLIP, socat,  already sucessfully done serial coms via GNU Screen, >
+* <todo: consider, SSH over USB cable interface between Ubuntu 24 dev env and Single Board Computer SBC device likely rpi z2w in first instance, dependency serial coms setup configuration on SBC and Ubuntu 24 dev env, after first attempting GNU screen or minicom serial coms over USB cable, lower cost and USB cables less expensive than Serial Bridge Chip devices with no requirement of UART, most use in opperational production units in the wild, barring any wireless bluetooth or wifi coms, >
+* <todo: consider, SSH over Wifi, most useful for development in local network, applicable to products in the wild, configure RPi OS Trixi Lite in terminal cli window for wifi over GNU screen serial connection using serial bridge chip device, >
+* <todo: consider, SSH over bluetooth, is this possible, ??? >
 
 DONE
 * <done: consider, intent to commit >
