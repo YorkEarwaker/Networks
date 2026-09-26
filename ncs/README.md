@@ -3,8 +3,8 @@
 stub
 
 See also
-* Application, dds, [](), data distribution services
-* Electrical Engineering, []()
+* DDS, application, [](), data distribution services
+* Electrical Engineering, [](), several
 * Hybrid Power, []() specifically usm, US Mil Std 3071, but others too
 * NEXUX-1, robotics []()
 
