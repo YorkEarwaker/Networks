@@ -5,7 +5,7 @@ stub
 See also
 * Application, dds, [](), data distribution services
 * Electrical Engineering, []()
-* Hybrid Power, []() specifically usm, US Mil Std 3017, but others too
+* Hybrid Power, []() specifically usm, US Mil Std 3071, but others too
 * NEXUX-1, robotics []()
 
 ## Notes
