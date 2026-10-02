@@ -1,11 +1,11 @@
-# Networked control system
+# Networked control system ncs
 
 stub
 
 See also
 * DDS, application, [](), data distribution services
 * Electrical Engineering, [](), several
-* Hybrid Power, []() specifically usm, US Mil Std 3071, but others too
+* Hybrid Power, []() specifically tactical microgrid tmg, but others too
 * NEXUX-1, robotics []()
 
 ## Notes
