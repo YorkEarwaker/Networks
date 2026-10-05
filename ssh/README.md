@@ -4,6 +4,7 @@ Application layer protocol, software package that enables secure system administ
 
 See also
 * Electrical engineering, various embedded SBC projects [GH](https://github.com/YorkEarwaker/Electrical-Engineering), e.g. /rpi-z, ...
+* SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards, [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683), Ubuntu Community, about ssh config file creation and usage
 
 ## Notes
 
@@ -297,8 +298,24 @@ From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspbe
 * SSH client on Dell XPS-15-9560 hardware running Ubuntu 24 LTS operating system
 * SSH server on RPi Zero 2 W hardware running RPi Trixie operating system
 * Query some of the RPi Zero specification information
+
+~ .ssh/config file entry
 ```
-TBD
+# ###
+# AGW project PMS trixie lite, particulate matter sensor
+# Test env
+Host pi-trixie-pms # user login convenience
+HostName 192.168.1.216 # ip address
+UserKnownHostsFile ~/.ssh/known_hosts_trixie_pms # file into which ssh key is s>
+HostKeyAlias pi-trixie-pms-key # database lookup in file above
+# User citizen-developer # uncomment after this user is created
+# User york-earwaker # system root, should be disabled in future on rpi host
+```
+
+SSH Login
+```
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms
+york-earwaker@pi-trixie-pms-key's password:
 ```
 
 #### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero Ubuntu Server
@@ -308,6 +325,13 @@ From Dell laptop running Ubuntu 24 LTS 'the development host' OS logon to Raspbe
 * SSH server on RPi Zero 2 W hardware running Ubuntu Server operating system
 * Query some of the RPi Zero specification information
 * <todo: consider, Ubuntu Server 26 for start of evaluation of new release, >
+
+~ .ssh/config file entr
+```
+TBD
+```
+
+SSH Logon
 ```
 TBD
 ```
