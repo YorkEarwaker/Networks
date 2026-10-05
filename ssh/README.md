@@ -4,6 +4,7 @@ Application layer protocol, software package that enables secure system administ
 
 See also
 * Electrical engineering, various embedded SBC projects [GH](https://github.com/YorkEarwaker/Electrical-Engineering), e.g. /rpi-z, ...
+* Embedded operating systems for raspberry pi eos-rpi, OS install and confiiguration, [GH](https://github.com/YorkEarwaker/Operating-System/tree/main/eos/eos-rpi#output---os-install-and-confiiguration), List of OS's installed for rpi-z
 * SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards, [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683), Ubuntu Community, about ssh config file creation and usage
 
 ## Notes
