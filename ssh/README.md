@@ -323,6 +323,15 @@ SSH Login
 ```
 york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms
 york-earwaker@pi-trixie-pms-key's password:
+Linux raspberrypi 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+citizen-developer@raspberrypi:~ $ 
 ```
 
 #### SSH logon - from Dell Ubuntu 24 LTS to RPi Zero Ubuntu Server
