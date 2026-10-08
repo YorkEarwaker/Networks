@@ -8,7 +8,7 @@ See also
 ## Notes
 
 Objectives
-* Use in AGW project, 
+* Use in AGW project, e.g. ism bands, same frequency non ism;  wifi, bluetooth, LoRa, wireless sensor networks, ...
 * Remote coms access, weather stations, hybrid power microgrids, 
 * Control system MCU SBC connectivity
 * System firmware updates
@@ -30,7 +30,7 @@ DONE
 
 Standards
 * IEEE 802.3 Eithernet, not a wireless network standard but requires interop with, x by wire
-* IEEE 802.11 WiFi, [WP](https://en.wikipedia.org/wiki/IEEE_802.11)
+* ISO/IEC 8802.11, IEEE 802.11x, WiFi, [WP](https://en.wikipedia.org/wiki/IEEE_802.11)
 * IEEE 802.16 WiMAX, [WP](https://en.wikipedia.org/wiki/IEEE_802.16), Worldwide Interoperability for Microwave Access, wireless metropolitian network WirelessMAN WMAN,  
 * IEEE 803.11 VoIP, []()
 * ...
@@ -46,10 +46,15 @@ Standards
 * Satelite communication networks, uplink, downlink, microwave
 * Space microwave networks, 
 * Wifi, 
+* Wireless community networks, non gov, non corporate, 
 * Wireless local area networks WLAN, 
 * Wireless mesh network, self healing, 
 * Wireless metropolitan network WMAN, WiMAX
+* Wireless sensor networks WSNs [WP](https://en.wikipedia.org/wiki/Wireless_sensor_network), 
 * Wireless wide area network WWAN, 
+
+Channels - frequencies
+* ISM bands, [WP](https://en.wikipedia.org/wiki/ISM_radio_band) industrial scientific medical, AGW specific concerns, 
 
 Integrated Circuits - mosfet, ...
 * MOSFET, MOS transistor
