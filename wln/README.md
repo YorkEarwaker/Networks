@@ -1,6 +1,9 @@
 # Wireless network wln
 
-stub
+Radio waves, microwaves, photons, overcomes wiring concerns, difficult to wire areas, alternative to installing a physical network, mobility, 
+
+See also
+* Electrical engineering, 
 
 ## Notes
 
@@ -10,11 +13,14 @@ Objectives
 * Control system MCU SBC connectivity
 * System firmware updates
 
+Use case
+*  Cohesive but distributed and federated domains, extreme weather attribution
 
 
 ## STatus
 TODO
 * <todo: consider, wifi, bluetooth, satelite link, other? >
+* <todo: consider, break parts of this out into separate sub projects as AGW requirements need evolves >
 
 DONE
 * <done: consider, intent to commit>
@@ -23,24 +29,32 @@ DONE
 ## Libs
 
 Standards
-* 802.3 Eithernet, not a wireless network standard but requires interop with, x by wire
-* 802.11 WiFi
-* 803.11 VoIP
+* IEEE 802.3 Eithernet, not a wireless network standard but requires interop with, x by wire
+* IEEE 802.11 WiFi, [WP](https://en.wikipedia.org/wiki/IEEE_802.11)
+* IEEE 802.16 WiMAX, [WP](https://en.wikipedia.org/wiki/IEEE_802.16), Worldwide Interoperability for Microwave Access, wireless metropolitian network WirelessMAN WMAN,  
+* IEEE 803.11 VoIP, []()
+* ...
 
 ## References
 
 * Wireless network [WP](https://en.wikipedia.org/wiki/Wireless_network),
-* Mobile phone networks, 
-* Wifi, 
 * Bluetooth, 
-* Satelite communication networks, uplink, downlink, microwave
-* Wireless local area networks wlan, 
+* Global area network GAN, mobile connectivity over arbitrary number of LANs, 
+* Mobile networks, cellular network, mobile phones, pagers, global system for mobile communication GSM, personal communications service PCS, 
+* Radio access network RAN, 
 * Terrestrial microwave networks, 
+* Satelite communication networks, uplink, downlink, microwave
+* Space microwave networks, 
+* Wifi, 
+* Wireless local area networks WLAN, 
+* Wireless mesh network, self healing, 
+* Wireless metropolitan network WMAN, WiMAX
+* Wireless wide area network WWAN, 
 
 Integrated Circuits - mosfet, ...
 * MOSFET, MOS transistor
-* RF CMOS, []() radio frequency CMOS, IC analog and digital radio waves, 
+* RF CMOS, []() radio frequency CMOS, IC analog and digital for radio waves, 
 
 Docs - Ubuntu
 * Configure Wi-Fi connections, [WS](https://documentation.ubuntu.com/core/explanation/system-snaps/network-manager/how-to-guides/configure-wifi-connections/), Ubuntu core, 
-* 
+* ...
