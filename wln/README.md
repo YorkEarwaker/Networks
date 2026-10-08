@@ -56,10 +56,18 @@ Standards
 Channels - frequencies
 * ISM bands, [WP](https://en.wikipedia.org/wiki/ISM_radio_band) industrial scientific medical, AGW specific concerns, 
 
+OSI model - 
+* Cross layer optimization, accross the OSI seven layer boundaries, 
+
+WSNs - 
+* Energy harvesting, [WP](https://en.wikipedia.org/wiki/Energy_harvesting), renewables
+* Low Power Wide Area Network LPWAN, [](), LoRa, Thread, Zigbee, Z-wave
+
 Integrated Circuits - mosfet, ...
 * MOSFET, MOS transistor
 * RF CMOS, []() radio frequency CMOS, IC analog and digital for radio waves, 
 
 Docs - Ubuntu
 * Configure Wi-Fi connections, [WS](https://documentation.ubuntu.com/core/explanation/system-snaps/network-manager/how-to-guides/configure-wifi-connections/), Ubuntu core, 
+* Ubuntu server documentation, [WS](https://ubuntu.com/server/docs/)
 * ...
