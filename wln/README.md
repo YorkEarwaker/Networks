@@ -20,11 +20,11 @@ Use case
 ## STatus
 TODO
 * <todo: consider, wifi, bluetooth, satelite link, other? >
-* <todo: consider, break parts of this out into separate sub projects as AGW requirements need evolves >
 
 DONE
 * <done: consider, intent to commit>
 * <done: consider, first wifi project MCU rpi-pico micropython see electrical engineering >
+* <done: consider, break parts of this out into separate sub projects as AGW requirements need evolves, created /wfi sub project within /wln , follow similar patters with others  >
 
 ## Libs
 
@@ -67,7 +67,4 @@ Integrated Circuits - mosfet, ...
 * MOSFET, MOS transistor
 * RF CMOS, []() radio frequency CMOS, IC analog and digital for radio waves, 
 
-Docs - Ubuntu
-* Configure Wi-Fi connections, [WS](https://documentation.ubuntu.com/core/explanation/system-snaps/network-manager/how-to-guides/configure-wifi-connections/), Ubuntu core, 
-* Ubuntu server documentation, [WS](https://ubuntu.com/server/docs/)
-* ...
+
