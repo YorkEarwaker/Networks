@@ -20,6 +20,7 @@ Use case
 ## STatus
 TODO
 * <todo: consider, wifi, bluetooth, satelite link, other? >
+* <todo: consider, next order of priority create a /wsn sub project wireless sensor network, AGW related, resilliency related, nata a.iii, unsdg's regarding resilliency, >
 
 DONE
 * <done: consider, intent to commit>

@@ -1,6 +1,6 @@
 # Wifi wfi
 
-stub
+Wireless local area networks based on the IEEE 802 standards and protocol stack
 
 ## Notes
 
@@ -19,9 +19,14 @@ DONE
 ## Libs
 
 Standards
-* ISO/IEC 8802.11, IEEE 802.11x
+* ISO/IEC 8802.11, IEEE 802.11x [WP](https://en.wikipedia.org/wiki/IEEE_802.11), wifi standards and protocols
 
 ## References
+
+Terms
+* IEEE 802 [WP](https://en.wikipedia.org/wiki/IEEE_802), osi model, 
+* WiFi [WP](https://en.wikipedia.org/wiki/Wi-Fi), wireless lan protocols base on 802.11 standards
+
 
 Docs - ubuntu
 * Configure Wi-Fi connections, [WS](https://documentation.ubuntu.com/core/explanation/system-snaps/network-manager/how-to-guides/configure-wifi-connections/), ubuntu core, 
