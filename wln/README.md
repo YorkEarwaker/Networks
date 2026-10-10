@@ -20,12 +20,12 @@ Use case
 ## STatus
 TODO
 * <todo: consider, wifi, bluetooth, satelite link, other? >
-* <todo: consider, next order of priority create a /wsn sub project wireless sensor network, AGW related, resilliency related, nata a.iii, unsdg's regarding resilliency, >
 
 DONE
 * <done: consider, intent to commit>
 * <done: consider, first wifi project MCU rpi-pico micropython see electrical engineering >
 * <done: consider, break parts of this out into separate sub projects as AGW requirements need evolves, created /wfi sub project within /wln , follow similar patters with others  >
+* <todo: consider, next order of priority create a /wsn sub project wireless sensor network, AGW related, resilliency related, nata a.iii, unsdg's regarding resilliency, /wsn sub project started stub but very important for AGW project, high priority >
 
 ## Libs
 
