@@ -365,6 +365,9 @@ Concerns - vulnerabilities
 Docs - RPi
 * Remote Access, [WS](https://www.raspberrypi.com/documentation/computers/remote-access.html), RPi docs, 
 
+Docs - ssh .com
+* Authorized Keys File in SSH, [WS](https://www.ssh.com/academy/ssh/authorized-keys-file)
+
 News Papers - ssh version
 * Commands to know the version of OpenSSH client and server?, [WS](https://unix.stackexchange.com/questions/721368/commands-to-know-the-version-of-openssh-client-and-server), 18 Oct 2022 (edited), Unix & Linux, StackExchange, 
 
