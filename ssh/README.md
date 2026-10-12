@@ -100,6 +100,13 @@ Interaction diagram
 * <todo: consider, sysadmin example, developer example, tester example, >
 * <todo: consider, demonstrate target sysetm user creation e.g.  sudo adduser citizen-sysadmin, addition to specific groups permissions and so on, >
 
+Self provisioning
+* Never for production environments, against all identity and access management best practice, extremely high security risk
+* Development environment only, rapid application development
+* authrized_keys, server side client files, best source to date wikidocs see references
+* <todo: much more research required to make secure risk mitigation recomendations 2026.10.12 >
+
+
 ### Output - Check ssh version
 * for both the client software and the server software installed on localhost.
 * for security to ensure version has been patched for vulnerabilities.
@@ -361,6 +368,13 @@ Terms
 
 Concerns - vulnerabilities
 * Terrapin Attack, [WP](https://en.wikipedia.org/wiki/Terrapin_attack), fixed in ssh version 9.6
+
+Docs - openssh
+* authorized_keys [WS](https://en.wikibooks.org/wiki/OpenSSH/Client_Configuration_Files#~/.ssh/authorized_keys), wikibooks, 
+
+Docs - linux
+* authorized_keys, [WS](https://man.he.net/man5/authorized_keys), BSD System Manager's Manual, 
+* ssh, [WS](https://man.he.net/man1/ssh), BSD System Manager's Manual, 
 
 Docs - RPi
 * Remote Access, [WS](https://www.raspberrypi.com/documentation/computers/remote-access.html), RPi docs, 
