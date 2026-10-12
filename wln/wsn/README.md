@@ -47,8 +47,8 @@ Terms
 * Wireless sensor network WSN, [WS](https://en.wikipedia.org/wiki/Wildland%E2%80%93urban_interface) 
 
 WUI - wildfire, urbanfire, firestorm
-* Wildland urban interface WUI, transitional zone between wildland and urbanisation
-* intermix WUI, buildings and vegetation intermingled
+* Wildland urban interface WUI, [WS](https://en.wikipedia.org/wiki/Wildland%E2%80%93urban_interface), transitional zone between wildland and urbanisation
 * interface WUI, buildings located near large patches of wildland
+* intermix WUI, buildings and vegetation intermingled
 * International Wildland Urban Interface Code IWUIC, guidlines for ignition resistant construction, defensible space, emergency access for protection of life and property
 
