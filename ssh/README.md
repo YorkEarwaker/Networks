@@ -99,13 +99,14 @@ Operating systems ssh/sshd defaults
 * <todo: consider, ITAR free linux distros, au, ca, jp, kr, uk, eu member states inc de es fr it nl pl others, others tbd, >
 
 OS - default configuration settings
-| Operating System    | Password authorization     | Security key default           | AGW target  |
-| :------------------ | :------------------------- | :----------------------------- | :---------- |
-| Debian              | Default enabled            | Key not needed, N.01           | tbd         |
-| RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     |
-| Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     |
-| Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary     |
-| AGW target OS tbd   | ...                        | ...                            | ...         |
+| Operating System    | Password authorization     | Security key default           | AGW target  | OS Kind |
+| :------------------ | :------------------------- | :----------------------------- | :---------- | :------ |
+| Debian              | Default enabled            | Key not needed, N.01           | tbd         | Linux   |
+| RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     | Linux   |
+| Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     | Linux   |
+| Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary     | Linux   |
+| AGW target RTOS     | ...                        | ...                            | Primary     | RTOS    |
+| ...                 | ...                        | ...                            | ...         | ...     |
 
 Notes - as of writing 2026.10.14 
 * N.01 Debian, including RPiOS Trixi Lite, OS shipped with sshd password authentication set to `yes` by default
