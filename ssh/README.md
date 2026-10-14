@@ -105,7 +105,7 @@ OS - default configuration settings
 | RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     | Linux   |
 | Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     | Linux   |
 | Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary     | Linux   |
-| AGW target RTOS     | ...                        | ...                            | Primary     | RTOS    |
+| AGW target RTOS tbd | ...                        | ...                            | Primary     | RTOS    |
 | ...                 | ...                        | ...                            | ...         | ...     |
 
 Notes - as of writing 2026.10.14 
