@@ -111,7 +111,7 @@ Notes - as of writing 2026.10.14
 * N.01 Debian, including RPiOS Trixi Lite, OS shipped with sshd password authentication set to `yes` by default
 * N.02 Ubuntu Core, is an immutable OS and by design is security key only, requires an Ubuntu one account, SSH Keys [WS](https://login.ubuntu.com/ssh-keys)
 * N.03 Ubuntu Server, uses cloud init ssh configuration, located `/etc/ssd/sshd_config.d/50-cloud-init.conf`
-* N.04 Ubuntu Server, if a security key is provided at install, password authentication set to `no` <todo: consider, further disambiguation needed, does security key here mean not Ed22519/RSA but LAN router credentials, >
+* N.04 Ubuntu Server, if a security key is provided at install, password authentication set to `no` <todo: consider, further disambiguation needed, does security key here mean not Ed22519/RSA but LAN router credentials, likely if only partially setup durring install then defaults to `no` so if LAN router SSID name and password provided and security key is omitted then password auth set to `no`  >
 
 ### Set up client - .ssh/config file
 * Status: Success! :)
