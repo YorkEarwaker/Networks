@@ -93,6 +93,26 @@ Interaction diagram
          | -- 6. close ssh session -----------------------------> |
 ```
 
+Operating systems ssh/sshd defaults
+* <todo: consider, a survey of primary AGW target os's ssh/sshd default settings, RPIOS, Ubuntu, >
+* <todo: consider, braoder survey of OS's that parts of the AGW project systems and devices will interoperate with, or might become secondary AGW target os's >
+* <todo: consider, ITAR free linux distros, au, ca, jp, kr, uk, eu member states inc de es fr it nl pl others, others tbd, >
+
+OS - default configuration settings
+| Operating System    | Password authorization     | Security key req               | AGW target  |
+| ------------------- | -------------------------- | ------------------------------ | ----------- |
+| Debian              | Default enabled            | Key not needed, N.01           | tbd         |
+| RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     |
+| Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     |
+| Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary     |
+| AGW target OS tbd   | ...                        | ...                            | ...         |
+
+Notes - as of writing 2026.10.14 
+N.01 Debian, including RPiOS Trixi Lite, OS shipped with sshd password authentication set to `yes` by default
+N.02 Ubuntu Core, is an immutable OS and by design is security key only, requires an Ubuntu one account, SSH Keys [WS](https://login.ubuntu.com/ssh-keys)
+N.03 Ubuntu Server, uses cloud init ssh configuration, located `/etc/ssd/sshd_config.d/50-cloud-init.conf`
+N.04 Ubuntu Server, if a security key is provided at install, password authentication set to `no` <todo: consider, further disambiguation needed, does security key here mean not Ed22519/RSA but LAN router credentials, >
+
 ### Set up client - .ssh/config file
 * Status: Success! :)
 * SSH login to single board computer with fixed ip address via many OS’s flashed to many micro sd cards, [WS](https://discourse.ubuntu.com/t/ssh-login-to-single-board-computer-with-fixed-ip-address-via-many-oss-flashed-to-many-micro-sd-cards/86683), Ubuntu Community, about ssh config file creation and usage
