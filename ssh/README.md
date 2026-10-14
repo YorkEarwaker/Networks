@@ -94,13 +94,13 @@ Interaction diagram
 ```
 
 Operating systems ssh/sshd defaults
-* <todo: consider, a survey of primary AGW target os's ssh/sshd default settings, RPIOS, Ubuntu, >
-* <todo: consider, braoder survey of OS's that parts of the AGW project systems and devices will interoperate with, or might become secondary AGW target os's >
+* <todo: consider, a survey of primary AGW target os's ssh/sshd default settings and URI docs links to same, RPIOS, Ubuntu, >
+* <todo: consider, broader survey of OS's that parts of the AGW project systems and devices will interoperate with, or might become secondary AGW target os's >
 * <todo: consider, ITAR free linux distros, au, ca, jp, kr, uk, eu member states inc de es fr it nl pl others, others tbd, >
 
 OS - default configuration settings
-| Operating System    | Password authorization     | Security key req               | AGW target  |
-| ------------------- | -------------------------- | ------------------------------ | ----------- |
+| Operating System    | Password authorization     | Security key default           | AGW target  |
+| :------------------ | :------------------------- | :----------------------------- | :---------- |
 | Debian              | Default enabled            | Key not needed, N.01           | tbd         |
 | RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     |
 | Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     |
