@@ -99,20 +99,21 @@ Operating systems ssh/sshd defaults
 * <todo: consider, ITAR free linux distros, au, ca, jp, kr, uk, eu member states inc de es fr it nl pl others, others tbd, >
 
 OS - default configuration settings
-| Operating System    | Password authorization     | Security key default           | AGW target  | OS Kind |
-| :------------------ | :------------------------- | :----------------------------- | :---------- | :------ |
-| Debian              | Default enabled            | Key not needed, N.01           | tbd         | Linux   |
-| RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary     | Linux   |
-| Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary     | Linux   |
-| Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary     | Linux   |
-| AGW target RTOS tbd | ...                        | ...                            | Primary     | RTOS    |
-| ...                 | ...                        | ...                            | ...         | ...     |
+| Operating System    | Password authorization     | Security key default           | AGW target   | OS Kind |
+| :------------------ | :------------------------- | :----------------------------- | :----------  | :------ |
+| Debian              | Default enabled            | Key not needed, N.01           | tbd          | Linux   |
+| RPiOS Trixie Lite   | Default enabled            | Key not needed, N.01           | Primary N.05 | Linux   |
+| Ubuntu Core         | Always disabled, N.02      | Key only by design             | Primary      | Linux   |
+| Ubuntu Server 24.04 | Cloud init controled, N.03 | Install config dependent, N.04 | Primary      | Linux   |
+| AGW target RTOS tbd | ...                        | ...                            | Primary      | RTOS    |
+| ...                 | ...                        | ...                            | ...          | ...     |
 
 Notes - as of writing 2026.10.14 
 * N.01 Debian, including RPiOS Trixi Lite, OS shipped with sshd password authentication set to `yes` by default
 * N.02 Ubuntu Core, is an immutable OS and by design is security key only, requires an Ubuntu one account, SSH Keys [WS](https://login.ubuntu.com/ssh-keys)
 * N.03 Ubuntu Server, uses cloud init ssh configuration, located `/etc/ssd/sshd_config.d/50-cloud-init.conf`
 * N.04 Ubuntu Server, if a security key is provided at install, password authentication set to `no` <todo: consider, further disambiguation needed, does security key here mean not Ed22519/RSA but LAN router credentials, likely if only partially setup durring install then defaults to `no` so if LAN router SSID name and password provided and security key is omitted then password auth set to `no`  >
+* N.05 RPiOS Trixie Lite, likely have to downgrade to seondary AGW tartget or possibly not at all and drop altogether as Raspberry Pi hardware chip set die design are Broadcom and therefore not ITAR free, due to 2026 shift in geopolitics
 
 ### Set up client - .ssh/config file
 * Status: Success! :)
