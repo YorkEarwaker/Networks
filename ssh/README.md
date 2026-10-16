@@ -125,7 +125,7 @@ Notes - as of writing 2026.10.14
 
 Example config file entry
 * the hash `#` symbol is the comment character and everything after it is ignored
-* user is presented with `citizen-developer@pi-ubuntu-pms-dev` as logon prompt
+* user is presented with `citizen-developer@pi-ubuntu-pms-test-env` as logon prompt
 * <todo: consider, hostname at install and shell prompt and ssh config entry to match? likely not? as OS instance might be reused for different purpose? >
 ```
 # ###
