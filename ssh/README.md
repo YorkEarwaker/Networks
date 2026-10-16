@@ -121,13 +121,34 @@ Notes - as of writing 2026.10.14
 * <todo: consider, create a step by step example, walk through, >
 * <todo: consider, sysadmin example, developer example, tester example, >
 * <todo: consider, demonstrate target sysetm user creation e.g.  sudo adduser citizen-sysadmin, addition to specific groups permissions and so on, >
+* <todo: consider, naming convention for AGW project for ssh config file entries, for example HostKeyAlias value is presented as the `box` name to end user, consier use hardware instance or os instance in this naming? >
+
+Example config file entry
+* the hash `#` symbol is the comment character and everything after it is ignored
+* user is presented with `citizen-developer@pi-ubuntu-pms-dev` as longin prompt
+* <todo: consider, hostname at install and shell prompt and ssh config entry to match? likely not? as OS instance might be reused for different purpose? >
+```
+# ###
+# AGW project PMS ubuntu server, particulate matter sensor
+# Dev Test env
+Host pi-ubuntu-pms-dev # user login convenience
+HostName 192.168.1.216 # ip address
+UserKnownHostsFile ~/.ssh/known_hosts_ubuntu_pms # file into which ssh key is saved
+HostKeyAlias pi-ubuntu-pms-test-env # provides a stable alias in file above, references the os instance on 'box'
+User citizen-developer # uncomment after this user is created
+IdentityFile ~/.ssh/id_ed25519
+```
 
 Self provisioning
 * Never for production environments, against all identity and access management best practice, extremely high security risk
 * Development environment only, rapid application development
 * authrized_keys, server side client files, best source to date wikidocs see references
-* <todo: much more research required to make secure risk mitigation recomendations 2026.10.12 >
+* <todo: consider, much more research required to make secure risk mitigation recomendations 2026.10.12 >
 
+Security key generation Ed25519 example
+```
+tbd
+```
 
 ### Output - Check ssh version
 * for both the client software and the server software installed on localhost.
@@ -182,6 +203,90 @@ see
 * <todo: consider, confirm standard openssh-server use, standard /etc/ssh/sshd_config file, >
 * <todo: consider, RPi docs for ssh into Trixie OS, >
 * <todo: consider, bau dev workflow for ssh with RPi Trixie, use AGW project rpi-z/cpa/snr-rsl as examplar, >
+
+Login default password authentication
+* check passwordauthentication is set to 'yes'
+* exit
+```
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms-dev
+citizen-developer@pi-trixie-pms-test-env's password: 
+Permission denied, please try again.
+citizen-developer@pi-trixie-pms-test-env's password: 
+Linux raspberrypi 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct 16 10:34:10 2026 from 192.168.1.96
+citizen-developer@raspberrypi:~ $ sudo sshd -T | grep passwordauthentication
+[sudo] password for citizen-developer: 
+passwordauthentication yes
+citizen-developer@raspberrypi:~ $ exit
+logout
+Connection to 192.168.1.216 closed.
+```
+
+Set security key on trixie server
+* Set trixie os security key for this user `citizen-developer` in their `~/.ssh/authorized_keys` file
+* Logon the trixie lite os instance via ssh, note no login password was requested
+* Harden trixie os disable ssh login with user credentials, set passwordauthentication to no, Important don't do this untill the ssh key has been transfered and is working or the user will be locked out permanently
+* Check passwordauthentication is now set to `no`
+```
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh-copy-id -i ~/.ssh/id_ed25519.pub pi-trixie-pms-dev
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/york-earwaker/.ssh/id_ed25519.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+citizen-developer@pi-trixie-pms-test-env's password: 
+Permission denied, please try again.
+citizen-developer@pi-trixie-pms-test-env's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'pi-trixie-pms-dev'"
+and check to make sure that only the key(s) you wanted were added.
+
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms-dev
+Linux raspberrypi 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct 16 11:06:48 2026 from 192.168.1.96
+citizen-developer@raspberrypi:~ $ sudo sshd -T | grep passwordauthentication
+[sudo] password for citizen-developer: 
+passwordauthentication yes
+citizen-developer@raspberrypi:~ $ sudo tee /etc/ssh/sshd_config.d/90-hardening.conf << 'EOF'
+> PasswordAuthentication no
+> EOF
+PasswordAuthentication no
+citizen-developer@raspberrypi:~ $ sudo systemctl reload ssh
+citizen-developer@raspberrypi:~ $ sudo sshd -T | grep passwordauthentication
+passwordauthentication no
+citizen-developer@raspberrypi:~ $ exit
+logout
+Connection to 192.168.1.216 closed.
+```
+
+Log back in the ensure it is all working as expected
+* Note no password was requested on ssh logon to trixie lite os instance
+```
+york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms-dev
+Linux raspberrypi 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct 16 11:33:50 2026 from 192.168.1.96
+```
 
 
 ### Ubuntu Server - embedded? SBC OS deployment target
