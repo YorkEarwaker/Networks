@@ -126,6 +126,7 @@ Notes - as of writing 2026.10.14
 Example config file entry
 * the hash `#` symbol is the comment character and everything after it is ignored
 * user is presented with `citizen-developer@pi-ubuntu-pms-test-env` as logon prompt
+* Note the trixie lite user `citizen-developer` was created separately on the trixie lite os instance, this process is not shown here
 * <todo: consider, hostname at install and shell prompt and ssh config entry to match? likely not? as OS instance might be reused for different purpose? >
 ```
 # ###
