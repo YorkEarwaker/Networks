@@ -42,6 +42,7 @@ TODO
 * <todo: consider, SSH over USB cable interface between Ubuntu 24 dev env and Single Board Computer SBC device likely rpi z2w in first instance, dependency serial coms setup configuration on SBC and Ubuntu 24 dev env, after first attempting GNU screen or minicom serial coms over USB cable, lower cost and USB cables less expensive than Serial Bridge Chip devices with no requirement of UART, most use in opperational production units in the wild, barring any wireless bluetooth or wifi coms, >
 * <todo: consider, SSH over Wifi, most useful for development in local network, applicable to products in the wild, configure RPi OS Trixi Lite in terminal cli window for wifi over GNU screen serial connection using serial bridge chip device, >
 * <todo: consider, SSH over bluetooth, is this possible, ??? >
+* <todo: consider, this page has some duplication issues that need resolving, >
 
 DONE
 * <done: consider, intent to commit >
@@ -147,8 +148,9 @@ Self provisioning
 * <todo: consider, much more research required to make secure risk mitigation recomendations 2026.10.12 >
 
 Security key generation Ed25519 example
+* <todo: consider, link to security page EdDSC? /edd? >
 ```
-tbd
+tbd, tobe described elsewhere in Security repo 
 ```
 
 ### Output - Check ssh version
@@ -292,6 +294,12 @@ Last login: Fri Oct 16 11:33:50 2026 from 192.168.1.96
 citizen-developer@raspberrypi:~ $ 
 ```
 
+Set an security key password for use with ssh
+* Note this is not the Linux user credentials on the linux server instance, this is a seperate set of credentials, 
+* Even as these are distinct credential instance they might still use the same terms, that is if the password for brevity was 'FooBha' (not a secure password) for Linus user credentials the same 'FooBha' password could be used for security key credentials, which may or may not be advisable depending on use case
+```
+tbd
+```
 
 ### Ubuntu Server - embedded? SBC OS deployment target
 * Status: TBD
@@ -454,10 +462,13 @@ HostName 192.168.1.216 # ip address
 UserKnownHostsFile ~/.ssh/known_hosts_trixie_pms # file into which ssh key is s>
 HostKeyAlias pi-trixie-pms-key # database lookup in file above
 # User citizen-developer # uncomment after this user is created
+# IdentityFile ~/.ssh/id_ed25519
 # User york-earwaker # system root, should be disabled in future on rpi host
 ```
 
 SSH Login
+* Default Debian ssh logon  with Linux user credentials password 
+* See elsewhere for ssh enablement process activities
 ```
 york-earwaker@york-earwaker-XPS-15-9560:~$ ssh pi-trixie-pms
 york-earwaker@pi-trixie-pms-key's password:
