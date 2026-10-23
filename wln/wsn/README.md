@@ -53,3 +53,10 @@ WUI - wildfire, urbanfire, firestorm
 * International Wildland Urban Interface Code IWUIC, guidlines for ignition resistant construction, defensible space, emergency access for protection of life and property
 * Wildfire emergency management WEM, [WP](https://en.wikipedia.org/wiki/Wildfire_emergency_management) 
 
+Modeling - wildfire
+* Huygens-Fresnel principle, physics, wildfire boundaries are wave fronts on a two dimantional surface, might this be predictive of next sensor to register
+* Minimum travel time MTT, algorithem, building on huygens' + constant wind direction and fuel moisture environmental factors,  minimum time for fire to travel between two points, but short timescale simulations only due do constants, as reality is dynamic factors so 'chaos theory' rules and multivarient
+
+Mitigation - wildfire
+* Fire adapted community, us protocol, what is uk gov definition of same, eu, de, es, fr, jp, kr, au, nz, ca, ... ? know catastrophic failures of this approach
+
