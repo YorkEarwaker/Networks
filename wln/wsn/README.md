@@ -51,4 +51,5 @@ WUI - wildfire, urbanfire, firestorm
 * interface WUI, buildings located near large patches of wildland
 * intermix WUI, buildings and vegetation intermingled
 * International Wildland Urban Interface Code IWUIC, guidlines for ignition resistant construction, defensible space, emergency access for protection of life and property
+* Wildfire emergency management WEM, [WP](https://en.wikipedia.org/wiki/Wildfire_emergency_management) 
 
